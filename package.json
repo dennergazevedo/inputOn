@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "blog-input-on",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "Renove os seus conhecimentos.",
   "version": "0.1.0",
   "license": "0BSD",
   "scripts": {
@@ -14,9 +14,21 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "babel-plugin-styled-components": "^1.12.0",
     "gatsby": "^2.26.1",
+    "gatsby-plugin-canonical-urls": "^2.5.0",
+    "gatsby-plugin-google-analytics": "^2.6.0",
+    "gatsby-plugin-manifest": "^2.7.0",
+    "gatsby-plugin-nprogress": "^2.5.0",
+    "gatsby-plugin-offline": "^3.5.0",
+    "gatsby-plugin-page-creator": "^2.5.0",
+    "gatsby-plugin-react-helmet": "^3.5.0",
+    "gatsby-plugin-sitemap": "^2.7.0",
+    "gatsby-plugin-styled-components": "^3.5.0",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-helmet": "^6.1.0",
+    "styled-components": "^5.2.1"
   },
   "devDependencies": {
     "prettier": "2.1.2"

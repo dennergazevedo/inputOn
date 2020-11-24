@@ -1,21 +1,26 @@
-import React from 'react'
+import React from "react"
 
 // STYLED COMPONENTS
 import {
-    Container
-} from './styles.js';
+  Container
+} from './styles';
 
 // COMPONENTS
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import { GlobalStyle } from '../../styles/global';
 
-export default function About() {
-    return (
-        <Container>
-            <GlobalStyle />
-            <Navbar />
-            <Footer />
-        </Container>
-    )
+import { useTheme } from '../../contexts/theme';
+
+export default function Home() {
+  const { toggleTheme } = useTheme(); 
+
+  return (
+    <Container>
+      <GlobalStyle />
+      <Navbar />
+      <button onClick={toggleTheme}>useTheme</button>
+      <Footer />
+    </Container>
+  )
 }

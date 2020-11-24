@@ -73,6 +73,7 @@ export const Bottom = styled.div`
 
     span{
         text-align: center;
+        color: ${props => props.theme.color};
     }
 
     b{

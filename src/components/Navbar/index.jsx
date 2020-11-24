@@ -1,5 +1,6 @@
 /* eslint-disable no-restricted-globals */
 import React, { useState } from 'react'
+import { navigate } from 'gatsby';
 
 // STYLED COMPONENTS
 import {
@@ -24,7 +25,7 @@ export default function Navbar() {
     return (
         <Main>
             <Container>
-                <Logo>
+                <Logo onClick={() => navigate('/')}>
                     Input<b>On</b>
                 </Logo>
             </Container>

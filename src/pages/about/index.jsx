@@ -7,6 +7,7 @@ import {
 
 // COMPONENTS
 import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
 import { GlobalStyle } from '../../styles/global';
 
 export default function About() {
@@ -14,6 +15,7 @@ export default function About() {
         <Container>
             <GlobalStyle />
             <Navbar />
+            <Footer />
         </Container>
     )
 }

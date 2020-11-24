@@ -37,6 +37,7 @@ export const Logo = styled.h1`
     white-space: nowrap; 
     margin: 0 auto;
     max-width: auto;
+    cursor: pointer;
 
     animation: typing 1s steps(14, end), blink-caret .65s step-end infinite; 
 

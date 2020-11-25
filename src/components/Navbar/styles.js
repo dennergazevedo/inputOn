@@ -10,6 +10,7 @@ export const Main = styled.div`
     width: 80%;
     height: 80px;
     background-color: transparent;
+    margin-bottom: 50px;
 
     @media only screen and (max-width: 800px){
         width: 90%;
@@ -63,6 +64,18 @@ export const Menu = styled.div`
     flex-direction: row;
     align-items: center;
 
+    .iconSwitchOn{
+        color: #333;
+        margin-left: 5px;
+        margin-top: 2px;
+    }
+
+    .iconSwitchOff{
+        color: #FFF;
+        margin-left: 5px;
+        margin-top: 2px;
+    }
+
     span{
         font-size: 14px;
         font-weight: 600;
@@ -100,8 +113,8 @@ export const MenuBar = styled(motion.div)`
     padding: 15px;
     padding-left: 20px;
     padding-right: 20px;
-    background-color: ${props => props.theme.background};
-    box-shadow: 1px 1px 10px #3335;
+    background-color: ${props => props.theme.backgroundLight};
+    box-shadow: 1px 1px 10px ${props => props.theme.color}5;
     border-radius: 5px;
     position: absolute;
     top: 100px;

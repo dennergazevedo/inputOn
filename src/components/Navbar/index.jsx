@@ -49,7 +49,7 @@ export default function Navbar() {
             </Container>
             <Container>
                 {
-                    screen.width > 800?
+                    screen !== undefined && screen.width > 800?
                     <Menu>
                         <Switch 
                             onChange={toggleTheme} 

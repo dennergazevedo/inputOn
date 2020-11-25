@@ -25,6 +25,7 @@ import {
 } from 'react-icons/fa';
 
 export default function Navbar() {
+    const windowGlobal = typeof window !== 'undefined' && window
     const { theme, toggleTheme } = useTheme(); 
 
     const [menuOpen, setMenuOpen] = useState(false);
@@ -49,7 +50,7 @@ export default function Navbar() {
             </Container>
             <Container>
                 {
-                    window !== undefined && window.screen.width > 800?
+                    windowGlobal.screen.width > 800?
                     <Menu>
                         <Switch 
                             onChange={toggleTheme} 

@@ -25,78 +25,84 @@ import {
 } from 'react-icons/fa';
 
 export default function Navbar() {
-    const windowGlobal = typeof window !== 'undefined' && window
-    const { theme, toggleTheme } = useTheme(); 
+    const { theme, toggleTheme } = useTheme();
 
     const [menuOpen, setMenuOpen] = useState(false);
     const [isDark, setIsDark] = useState(false);
     const toggleMenu = () => setMenuOpen(!menuOpen);
 
-    useEffect(()=>{
-        if(theme === 'light'){
+    useEffect(() => {
+        if (theme === 'light') {
             setIsDark(false);
-        }else if(theme === 'dark'){
+        } else if (theme === 'dark') {
             setIsDark(true);
         };
     }, [theme])
 
 
     return (
-        <Main>
-            <Container>
-                <Logo onClick={() => navigate('/')}>
-                    Input<b>On</b>
-                </Logo>
-            </Container>
-            <Container>
-                {
-                    windowGlobal.screen.width > 800?
-                    <Menu>
-                        <Switch 
-                            onChange={toggleTheme} 
-                            checked={isDark}
-                            offColor="#333"
-                            onHandleColor="#333"
-                            offHandleColor="#FFF"
-                            onColor="#FFF"
-                            uncheckedIcon={<FaSun className="iconSwitchOff"/>}
-                            checkedIcon={<FaMoon className="iconSwitchOn"/>}
-                            height={20}
-                            width={45}/>
-                        <span>HOME</span>
-                        <span>FRONTEND</span>
-                        <span>BACKEND</span>
-                        <span>MOBILE</span>
-                    </Menu>
+        <>
+            {
+                typeof window !== 'undefined' ?
+                    <Main>
+                        <Container>
+                            <Logo onClick={() => navigate('/')}>
+                                Input<b>On</b>
+                            </Logo>
+                        </Container>
+                        <Container>
+                            {
+                                window.screen.width > 800 ?
+                                    <Menu>
+                                        <Switch
+                                            onChange={toggleTheme}
+                                            checked={isDark}
+                                            offColor="#333"
+                                            onHandleColor="#333"
+                                            offHandleColor="#FFF"
+                                            onColor="#FFF"
+                                            uncheckedIcon={<FaSun className="iconSwitchOff" />}
+                                            checkedIcon={<FaMoon className="iconSwitchOn" />}
+                                            height={20}
+                                            width={45} />
+                                        <span>HOME</span>
+                                        <span>FRONTEND</span>
+                                        <span>BACKEND</span>
+                                        <span>MOBILE</span>
+                                    </Menu>
+                                    :
+                                    <Menu menuOpened={menuOpen}>
+                                        <FaBars className="icon" onClick={toggleMenu} />
+                                        {
+                                            menuOpen &&
+                                            <MenuBar
+                                                initial={{ opacity: 0 }}
+                                                animate={{ opacity: 1 }}
+                                                transition={{ ease: 'easeOut', duration: 0.8 }}>
+                                                <Switch
+                                                    onChange={toggleTheme}
+                                                    checked={isDark}
+                                                    offColor="#333"
+                                                    onHandleColor="#333"
+                                                    offHandleColor="#FFF"
+                                                    onColor="#FFF"
+                                                    uncheckedIcon={<FaSun className="iconSwitchOff" />}
+                                                    checkedIcon={<FaMoon className="iconSwitchOn" />}
+                                                    height={20}
+                                                    width={45} />
+                                                <span>HOME</span>
+                                                <span>FRONTEND</span>
+                                                <span>BACKEND</span>
+                                                <span>MOBILE</span>
+                                            </MenuBar>
+                                        }
+                                    </Menu>
+                            }
+                        </Container>
+                    </Main>
                     :
-                    <Menu menuOpened={menuOpen}>
-                        <FaBars className="icon" onClick={toggleMenu}/>
-                        {
-                            menuOpen &&
-                            <MenuBar
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                transition={{ ease: 'easeOut', duration: 0.8 }}>
-                                    <Switch 
-                                        onChange={toggleTheme} 
-                                        checked={isDark}
-                                        offColor="#333"
-                                        onHandleColor="#333"
-                                        offHandleColor="#FFF"
-                                        onColor="#FFF"
-                                        uncheckedIcon={<FaSun className="iconSwitchOff"/>}
-                                        checkedIcon={<FaMoon className="iconSwitchOn"/>}
-                                        height={20}
-                                        width={45}/>
-                                <span>HOME</span>
-                                <span>FRONTEND</span>
-                                <span>BACKEND</span>
-                                <span>MOBILE</span>
-                            </MenuBar>
-                        }
-                    </Menu>
-                }
-            </Container>
-        </Main>
+                    null
+            }
+        </>
     )
 }

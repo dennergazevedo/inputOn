@@ -5,13 +5,15 @@ import React from "react"
 
 // STYLED COMPONENTS
 import {
-  Container
+  Container,
+  ListCards
 } from './styles';
 
 // COMPONENTS
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Destaque from '../components/Destaque';
+import Card from '../components/Card';
 
 // STYLES GLOBAL
 import { GlobalStyle } from '../styles/global';
@@ -26,9 +28,30 @@ export default function Home() {
       <Navbar />
         {
           [...api.keys()].map(id => (
-              <Destaque key={id} id={id} />
+              <>
+                {
+                  api[id].destaque?
+                  <Destaque key={id} id={id} />
+                  :
+                  null
+                }
+              </>
           ))
         }
+        <ListCards>
+          {
+            [...api.keys()].map(id => (
+                <>
+                  {
+                    !api[id].destaque?
+                    <Card key={id} id={id} />
+                    :
+                    null
+                  }
+                </>
+            ))
+          }
+        </ListCards>
       <Footer />
     </Container>
   )

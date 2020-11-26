@@ -18,6 +18,7 @@ export const Image = styled.img`
     width: 40%;
     height: auto;
     min-width: 300px;
+    cursor: pointer;
 `;
 
 export const Body = styled.div`
@@ -35,6 +36,13 @@ export const Title = styled.h1`
     margin-top: 50px;
     margin-bottom: 50px;
     color: ${props => props.theme.color};
+    transition: 0.5s all;
+
+    &:hover{
+        transition: 0.5s all;
+        color: ${props => props.theme.primary};
+        cursor: pointer;
+    }
 
     @media only screen and (max-width: 800px){
         margin-top: 20px;
@@ -59,6 +67,7 @@ export const DestIcon = styled.div`
         font-size: 12px;
         font-weight: 600;
         color: ${props => props.theme.background};
+        cursor: default;
     }
 
     .icon{
@@ -73,6 +82,12 @@ export const CreatedBy = styled.div`
     align-items: center;
     justify-content: center;
     color: ${props => props.theme.color};
+
+    &:hover{
+        transition: 0.5s all;
+        color: ${props => props.theme.primary};
+        cursor: pointer;
+    }
 `;
 
 export const MenuIcon = styled.div`
@@ -86,6 +101,12 @@ export const MenuIcon = styled.div`
     padding-right: 10px;
     background-color: ${props => props.theme.color};
     margin-top: 20px;
+
+    &:hover{
+        transition: 0.5s all;
+        background-color: ${props => props.theme.primary};
+        cursor: pointer;
+    }
 
     span{
         font-size: 10px;

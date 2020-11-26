@@ -13,7 +13,7 @@ const lightTheme = {
     color: '#FFF',
     hoverColor: '#74EAAE',
   };
-
+  
 export { lightTheme, darkTheme };
 
     

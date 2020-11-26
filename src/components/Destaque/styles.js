@@ -59,8 +59,8 @@ export const DestIcon = styled.div`
     justify-content: center;
     border-radius: 30px;
     padding: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
     background-color: ${props => props.theme.color};
 
     span{

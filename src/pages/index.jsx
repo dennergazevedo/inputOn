@@ -25,7 +25,12 @@ export default function Home() {
   return (
     <Container>
       <GlobalStyle />
-      <Navbar />
+      {
+        typeof window !== 'undefined'?
+        <Navbar />
+        :
+        null
+      }
         {
           [...api.keys()].map(id => (
               <>

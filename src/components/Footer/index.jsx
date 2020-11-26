@@ -37,7 +37,7 @@ export default function Footer() {
             <Bottom>
                 <span>
                     &copy; {new Date().getFullYear()} <b onClick={handleHome}>Blog InputOn</b> - Criado por &nbsp;
-                    <a href={`/author/denner-azevedo`}>
+                    <a href={`https://github.com/dennergazevedo`} target="_blank" rel="noreferrer">
                         Denner Azevedo
                     </a>
                     &nbsp;

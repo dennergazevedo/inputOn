@@ -11,13 +11,3 @@ export const Container = styled.div`
     padding: 0;
     background-color: ${props => props.theme.background}
 `;
-
-export const ListCards = styled.div`
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 80vw;
-    height: auto;
-    justify-content: center;
-    align-items: center;
-`;

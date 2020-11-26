@@ -2,52 +2,14 @@
     {
         "title": "Postagem de teste número 1(um)",
         "createdBy": "Denner Azevedo",
-        "createdLink": "denner-azevedo",
         "menu": "FRONTEND",
         "url": "about",
-        "destaque": true,
+        "destaque": false,
         "img": "https://blog.rocketseat.com.br/content/images/2020/11/blog-thumb-utilizando-mapas-no-react-com-leaflet-1.jpg"
     },
     {
         "title": "Postagem de teste número 2(dois)",
         "createdBy": "Denner Azevedo",
-        "createdLink": "denner-azevedo",
-        "menu": "BACKEND",
-        "url": "about",
-        "destaque": false,
-        "img": "https://blog.rocketseat.com.br/content/images/2020/11/blog-thumb-utilizando-mapas-no-react-com-leaflet-1.jpg"
-    },
-    {
-        "title": "Postagem de teste número 3(tres)",
-        "createdBy": "Denner Azevedo",
-        "createdLink": "denner-azevedo",
-        "menu": "BACKEND",
-        "url": "about",
-        "destaque": false,
-        "img": "https://blog.rocketseat.com.br/content/images/2020/11/blog-thumb-utilizando-mapas-no-react-com-leaflet-1.jpg"
-    },
-    {
-        "title": "Postagem de teste número 4(quatro)",
-        "createdBy": "Denner Azevedo",
-        "createdLink": "denner-azevedo",
-        "menu": "BACKEND",
-        "url": "about",
-        "destaque": false,
-        "img": "https://blog.rocketseat.com.br/content/images/2020/11/blog-thumb-utilizando-mapas-no-react-com-leaflet-1.jpg"
-    },
-    {
-        "title": "Postagem de teste número 5(cinco)",
-        "createdBy": "Denner Azevedo",
-        "createdLink": "denner-azevedo",
-        "menu": "BACKEND",
-        "url": "about",
-        "destaque": false,
-        "img": "https://blog.rocketseat.com.br/content/images/2020/11/blog-thumb-utilizando-mapas-no-react-com-leaflet-1.jpg"
-    },
-    {
-        "title": "Postagem de teste número 6(seis)",
-        "createdBy": "Denner Azevedo",
-        "createdLink": "denner-azevedo",
         "menu": "BACKEND",
         "url": "about",
         "destaque": false,

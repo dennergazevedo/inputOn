@@ -1,6 +1,7 @@
 /* eslint-disable no-restricted-globals */
 import React, { useState, useEffect } from 'react'
 import { navigate } from 'gatsby';
+import { window } from 'browser-monads';
 
 // COMPONENTS
 import Switch from "react-switch";

@@ -30,12 +30,7 @@ export default function index() {
     return (
         <Container>
             <GlobalStyle />
-            {
-                typeof window !== 'undefined'?
-                <Navbar />
-                :
-                null
-            }
+            <Navbar />
             <Body>
                 <ImageProfile src={dennerAzevedo} alt="Denner Azevedo"/>
                 <Author>Denner Azevedo</Author>

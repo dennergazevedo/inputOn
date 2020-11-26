@@ -21,12 +21,7 @@ export default function Home() {
   return (
         <Container>
             <GlobalStyle />
-            {
-                typeof window !== 'undefined'?
-                <Navbar />
-                :
-                null
-            }
+            <Navbar />
             <Body>
                 <NotFound>
                     404

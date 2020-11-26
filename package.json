@@ -16,6 +16,7 @@
   "dependencies": {
     "@react-native-community/async-storage": "^1.12.1",
     "babel-plugin-styled-components": "^1.12.0",
+    "browser-monads": "^1.0.0",
     "framer-motion": "^2.9.4",
     "gatsby": "^2.26.1",
     "gatsby-plugin-canonical-urls": "^2.5.0",

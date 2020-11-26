@@ -31,7 +31,7 @@ export default function Destaque(props) {
                 <Title>
                     {api[props.id].title}
                 </Title>
-                <CreatedBy>
+                <CreatedBy onClick={() => window.location.href = `/author/${api[props.id].createdLink}`}>
                     <span>por <b>{api[props.id].createdBy}</b></span>
                 </CreatedBy>
                 <MenuIcon>

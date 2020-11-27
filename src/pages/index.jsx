@@ -37,7 +37,6 @@ export default function Home() {
     <Container>
       <GlobalStyle />
       <Navbar />
-      <Carousel>
           {
             [...destaques.keys()].map(id => (
               <div>
@@ -45,7 +44,6 @@ export default function Home() {
               </div>
             ))
           }
-      </Carousel>
         <ListCards>
           {
             [...api.keys()].map(id => (

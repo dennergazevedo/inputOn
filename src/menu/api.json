@@ -14,7 +14,7 @@
         "createdLink": "denner-azevedo",
         "menu": "BACKEND",
         "url": "about",
-        "destaque": true,
+        "destaque": false,
         "img": "https://blog.rocketseat.com.br/content/images/2020/11/blog-thumb-utilizando-mapas-no-react-com-leaflet-1.jpg"
     },
     {

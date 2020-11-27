@@ -16,7 +16,6 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Destaque from '../components/Destaque';
 import Card from '../components/Card';
-import { Carousel } from 'react-responsive-carousel';
 
 // STYLES GLOBAL
 import { GlobalStyle } from '../styles/global';

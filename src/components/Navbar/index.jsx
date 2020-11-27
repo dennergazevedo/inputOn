@@ -30,6 +30,7 @@ export default function Navbar() {
 
     const [menuOpen, setMenuOpen] = useState(false);
     const [isDark, setIsDark] = useState(false);
+
     const toggleMenu = () => setMenuOpen(!menuOpen);
 
     useEffect(() => {

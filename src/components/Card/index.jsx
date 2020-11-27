@@ -1,4 +1,8 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+
 import React from 'react';
+
+import { navigate } from 'gatsby';
 
 // STYLED COMPONENTS
 import {
@@ -13,7 +17,7 @@ import {
 // API
 import api from '../../menu/api.json';
 
-export default function Card(props, { navigation }) {
+export default function Card(props) {
     return (
         <Container>
             <Image src={api[props.id].img} alt="Imagem" />
@@ -21,7 +25,7 @@ export default function Card(props, { navigation }) {
                 {api[props.id].title}
             </Title>
             <Body>
-                <CreatedBy onClick={() => window.location.href = `/author/${api[props.id].createdLink}`}>
+                <CreatedBy onClick={() => navigate(`/author/${api[props.id].createdLink}`)}>
                     <span>por <b>{api[props.id].createdBy}</b></span>
                 </CreatedBy>
                 <MenuIcon>

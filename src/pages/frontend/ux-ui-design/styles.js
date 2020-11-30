@@ -122,6 +122,7 @@ export const Text = styled.div`
         color: ${props => props.theme.color};
         text-align: justify;
         line-height: 26px;
+        text-decoration: none;
 
         .time{
             font-size: 10px;

@@ -22,6 +22,7 @@ import { GlobalStyle } from '../styles/global';
 
 // SERVICES
 import api from '../menu/api.json';
+import { Helmet } from "react-helmet";
 
 // ICONS
 import {
@@ -35,6 +36,11 @@ export default function Home() {
 
   return (
     <Container>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>InputOn - Homepage</title>
+        <link rel="canonical" href="https://www.inputon.com.br" />
+      </Helmet>
       <GlobalStyle />
       <Navbar />
           {

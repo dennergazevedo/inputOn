@@ -4,11 +4,14 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
-const siteMetadata = require ('./config/metadata');
 const googleAnalytics = require ('./config/googleanalytics');
 
 module.exports = {
-  siteMetadata,
+  siteMetadata: {
+    title: `InputOn`,
+    siteUrl: `https://www.inputon.com.br`,
+    description: `Renove seus conhecimentos.`,
+  },
   plugins: [
     {
       resolve: `gatsby-plugin-nprogress`,

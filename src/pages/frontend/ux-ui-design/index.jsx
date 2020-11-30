@@ -10,6 +10,7 @@ import { navigate } from 'gatsby';
 
 // STYLES GLOBAL
 import { GlobalStyle } from '../../../styles/global';
+import { Helmet } from "react-helmet";
 
 // STYLED COMPONENTS
 import {
@@ -38,6 +39,11 @@ export default function UXUI() {
 
     return (
         <Container>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>InputOn - UX e UI design</title>
+                <link rel="canonical" href="https://www.inputon.com.br/ux-ui-design" />
+            </Helmet>
             <GlobalStyle />
             <Navbar />
             <Body>

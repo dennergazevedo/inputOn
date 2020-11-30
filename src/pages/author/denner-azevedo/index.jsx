@@ -18,6 +18,7 @@ import dennerAzevedo from '../../../assets/img/author-denner-azevedo.jpg';
 import Navbar from '../../../components/Navbar';
 import Footer from '../../../components/Footer';
 import { GlobalStyle } from '../../../styles/global';
+import { Helmet } from "react-helmet";
 
 // ICONS
 import {
@@ -29,6 +30,11 @@ import {
 export default function index() {
     return (
         <Container>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>InputOn - Denner Azevedo</title>
+                <link rel="canonical" href="https://www.inputon.com.br/author/denner-azevedo" />
+            </Helmet>
             <GlobalStyle />
             <Navbar />
             <Body>

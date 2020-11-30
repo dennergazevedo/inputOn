@@ -29,6 +29,7 @@ import {
 
 // API
 import api from '../../menu/api.json';
+import { Helmet } from "react-helmet";
 
 export default function Frontend() {
 
@@ -48,6 +49,11 @@ export default function Frontend() {
 
     return (
         <Container>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>InputOn - FRONTEND</title>
+                <link rel="canonical" href="https://www.inputon.com.br/frontend" />
+            </Helmet>
             <GlobalStyle />
             <Navbar />
             <Body>

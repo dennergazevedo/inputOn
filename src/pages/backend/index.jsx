@@ -7,6 +7,7 @@ import Card from '../../components/Card';
 
 // STYLES GLOBAL
 import { GlobalStyle } from '../../styles/global';
+import { Helmet } from "react-helmet";
 
 // STYLED COMPONENTS
 import {
@@ -48,6 +49,11 @@ export default function Backend() {
 
     return (
         <Container>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>InputOn - BACKEND</title>
+                <link rel="canonical" href="https://www.inputon.com.br/backend" />
+            </Helmet>
             <GlobalStyle />
             <Navbar />
             <Body>

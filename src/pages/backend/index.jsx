@@ -21,7 +21,7 @@ import {
 
 // ICONS
 import {
-    FaPager,
+    FaDatabase,
 } from 'react-icons/fa';
 import {
     BsArrowDownShort
@@ -30,21 +30,21 @@ import {
 // API
 import api from '../../menu/api.json';
 
-export default function Frontend() {
+export default function Backend() {
 
     const [limit, setLimit] = useState(9);
 
     let apiFront = [];
 
-    function handleApiFront(){
+    function handleApiBackend(){
         for(let i=0; i < api.length; i++){
-            if(api[i].menu === 'FRONTEND'){
+            if(api[i].menu === 'BACKEND'){
                 apiFront.push(api[i]);
             }
         }
     }
 
-    handleApiFront();
+    handleApiBackend();
 
     return (
         <Container>
@@ -52,11 +52,11 @@ export default function Frontend() {
             <Navbar />
             <Body>
                 <Title>
-                    <FaPager className="icon"/>
-                    <span>FRONTEND</span>
+                    <FaDatabase className="icon"/>
+                    <span>BACKEND</span>
                 </Title>
                 <Subtitle>
-                    <span>Posts sobre tecnologias de FRONTEND</span>
+                    <span>Posts sobre tecnologias de Backend</span>
                 </Subtitle>
             </Body>
             <ListCards>

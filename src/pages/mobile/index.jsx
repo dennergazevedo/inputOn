@@ -21,7 +21,7 @@ import {
 
 // ICONS
 import {
-    FaPager,
+    FaMobileAlt,
 } from 'react-icons/fa';
 import {
     BsArrowDownShort
@@ -30,7 +30,7 @@ import {
 // API
 import api from '../../menu/api.json';
 
-export default function Frontend() {
+export default function Mobile() {
 
     const [limit, setLimit] = useState(9);
 
@@ -38,7 +38,7 @@ export default function Frontend() {
 
     function handleApiFront(){
         for(let i=0; i < api.length; i++){
-            if(api[i].menu === 'FRONTEND'){
+            if(api[i].menu === 'MOBILE'){
                 apiFront.push(api[i]);
             }
         }
@@ -52,11 +52,11 @@ export default function Frontend() {
             <Navbar />
             <Body>
                 <Title>
-                    <FaPager className="icon"/>
-                    <span>FRONTEND</span>
+                    <FaMobileAlt className="icon"/>
+                    <span>MOBILE</span>
                 </Title>
                 <Subtitle>
-                    <span>Posts sobre tecnologias de FRONTEND</span>
+                    <span>Posts sobre tecnologias de Mobile</span>
                 </Subtitle>
             </Body>
             <ListCards>

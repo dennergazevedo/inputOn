@@ -1,7 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-
 import React from 'react';
-
 import { navigate } from 'gatsby';
 
 // STYLED COMPONENTS
@@ -19,7 +17,7 @@ import api from '../../menu/api.json';
 
 export default function Card(props) {
     return (
-        <Container>
+        <Container onClick={() => navigate(`${api[props.id].url}`)}>
             <Image src={api[props.id].img} alt="Imagem" />
             <Title>
                 {api[props.id].title}

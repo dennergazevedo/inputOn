@@ -18,11 +18,12 @@ import {
 
 // API
 import api from '../../menu/api.json';
+import { navigate } from 'gatsby';
 
 export default function Destaque(props) {
     return (
         <Container>
-            <Image src={api[props.id].img} alt="Imagem" />
+            <Image src={api[props.id].img} alt="Imagem" onClick={() => navigate(`${api[props.id].url}`)}/>
             <Body>
                 <DestIcon>
                     <FaStar className="icon" />
@@ -31,10 +32,10 @@ export default function Destaque(props) {
                 <Title>
                     {api[props.id].title}
                 </Title>
-                <CreatedBy onClick={() => window.location.href = `/author/${api[props.id].createdLink}`}>
+                <CreatedBy>
                     <span>por <b>{api[props.id].createdBy}</b></span>
                 </CreatedBy>
-                <MenuIcon>
+                <MenuIcon onClick={() => navigate(`${(api[props.id].menu).toLowerCase()}`)}>
                     <span>{api[props.id].menu}</span>
                 </MenuIcon>
             </Body>

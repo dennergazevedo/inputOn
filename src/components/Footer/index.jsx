@@ -18,16 +18,15 @@ import {
 
 export default function Footer() {
 
-    const handleHome = () => navigate('/');
 
     return (
         <Main>
             <Top>
                 <div>
-                    <span>HOME</span>
-                    <span>FRONTEND</span>
-                    <span>BACKEND</span>
-                    <span>MOBILE</span>
+                    <span onClick={() => navigate('/')}>HOME</span>
+                    <span onClick={() => navigate('/frontend')}>FRONTEND</span>
+                    <span onClick={() => navigate('/backend')}>BACKEND</span>
+                    <span onClick={() => navigate('/mobile')}>MOBILE</span>
                 </div>
                 <div>
                     <span className="social"><FaFacebookSquare /></span>
@@ -36,7 +35,7 @@ export default function Footer() {
             </Top>
             <Bottom>
                 <span>
-                    &copy; {new Date().getFullYear()} <b onClick={handleHome}>Blog InputOn</b> - Criado por &nbsp;
+                    &copy; {new Date().getFullYear()} <b onClick={() => navigate('/')}>Blog InputOn</b> - Criado por &nbsp;
                     <a href={`/author/denner-azevedo`}>
                         Denner Azevedo
                     </a>

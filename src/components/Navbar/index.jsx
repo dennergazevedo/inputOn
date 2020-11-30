@@ -1,4 +1,7 @@
 /* eslint-disable no-restricted-globals */
+/* eslint-disabled jsx-a11y/click-events-have-key-events */
+/* eslint-disabled  jsx-a11y/no-static-element-interactions */
+
 import React, { useState, useEffect } from 'react'
 import { navigate } from 'gatsby';
 import { window } from 'browser-monads';
@@ -64,10 +67,10 @@ export default function Navbar() {
                                 checkedIcon={<FaMoon className="iconSwitchOn" />}
                                 height={20}
                                 width={45} />
-                            <span>HOME</span>
-                            <span>FRONTEND</span>
-                            <span>BACKEND</span>
-                            <span>MOBILE</span>
+                            <button onClick={() => navigate('/')}>HOME</button>
+                            <button onClick={() => navigate('/frontend')}>FRONTEND</button>
+                            <button onClick={() => navigate('/backend')}>BACKEND</button>
+                            <button onClick={() => navigate('/mobile')}>MOBILE</button>
                         </Menu>
                         :
                         <Menu menuOpened={menuOpen}>
@@ -89,10 +92,10 @@ export default function Navbar() {
                                         checkedIcon={<FaMoon className="iconSwitchOn" />}
                                         height={20}
                                         width={45} />
-                                    <span>HOME</span>
-                                    <span>FRONTEND</span>
-                                    <span>BACKEND</span>
-                                    <span>MOBILE</span>
+                                    <button onClick={() => navigate('/')}>HOME</button>
+                                    <button onClick={() => navigate('/frontend')}>FRONTEND</button>
+                                    <button onClick={() => navigate('/backend')}>BACKEND</button>
+                                    <button onClick={() => navigate('/mobile')}>MOBILE</button>
                                 </MenuBar>
                             }
                         </Menu>

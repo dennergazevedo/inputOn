@@ -76,7 +76,7 @@ export const Menu = styled.div`
         margin-top: 2px;
     }
 
-    span{
+    button{
         font-size: 14px;
         font-weight: 600;
         color: ${props => props.theme.color};
@@ -84,10 +84,12 @@ export const Menu = styled.div`
         margin-left: 10px;
         cursor: pointer;
         transition: 0.5s all;
+        background-color: transparent;
+        border: none;
 
         &:hover{
             transition: 0.5s all;
-            color: ${props => props.theme.hoverColor};
+            color: ${props => props.theme.primary};
         }
     }
 
@@ -99,7 +101,7 @@ export const Menu = styled.div`
 
         &:hover{
             transition: 0.5s all;
-            color: ${props => props.theme.hoverColor};
+            color: ${props => props.theme.primary};
         }
     }
 `;
@@ -120,7 +122,13 @@ export const MenuBar = styled(motion.div)`
     top: 100px;
     right: 20px;
 
-    span{
+    button{
         margin-top: 15px;
+        transition: 0.5s all;
+
+        &:hover{
+            transition: 0.5s all;
+            color: ${props => props.theme.primary};
+        }
     }
 `;

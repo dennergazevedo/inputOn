@@ -79,10 +79,12 @@ export const MenuIcon = styled.div`
     padding-right: 10px;
     background-color: ${props => props.theme.color};
     margin-top: 20px;
+    
 
     span{
         font-size: 10px;
         font-weight: 600;
         color: ${props => props.theme.background};
+        transition: 0.5s all;
     }
 `;

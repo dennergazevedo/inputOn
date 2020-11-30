@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
@@ -11,7 +11,7 @@ export const Container = styled.div`
   margin: 0;
   padding: 0;
   background-color: ${props => props.theme.background};
-`
+`;
 
 export const Body = styled.div`
   display: flex;
@@ -22,13 +22,13 @@ export const Body = styled.div`
   min-width: 300px;
   height: auto;
   padding: 20px;
-`
+`;
 
 export const ImageProfile = styled.img`
   width: 300px;
   height: auto;
   border-radius: 40px;
-`
+`;
 
 export const Author = styled.h1`
   color: ${props => props.theme.color};
@@ -39,7 +39,7 @@ export const Author = styled.h1`
   @media only screen and (max-width: 800px) {
     font-size: 40px;
   }
-`
+`;
 
 export const Social = styled.div`
   display: flex;
@@ -61,13 +61,13 @@ export const Social = styled.div`
       color: ${props => props.theme.primary};
     }
   }
-`
+`;
 
 export const Subtitle = styled.span`
   font-size: 24px;
   color: ${props => props.theme.color};
   text-align: center;
-`
+`;
 
 export const Tech = styled.div`
   display: flex;
@@ -82,4 +82,4 @@ export const Tech = styled.div`
     margin-left: 10px;
     margin-right: 10px;
   }
-`
+`;

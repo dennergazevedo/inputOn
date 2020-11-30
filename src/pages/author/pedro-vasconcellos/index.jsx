@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react';
 
 // STYLED COMPONENTS
 import {
@@ -9,19 +9,19 @@ import {
   Social,
   Subtitle,
   Tech,
-} from "./styles.js"
+} from './styles.js';
 
 // ASSETS
-import pedroVasconcellos from "../../../assets/img/author-pedro-vasconcellos.jpg"
+import pedroVasconcellos from '../../../assets/img/author-pedro-vasconcellos.jpg';
 
 // COMPONENTS
-import Navbar from "../../../components/Navbar"
-import Footer from "../../../components/Footer"
-import { GlobalStyle } from "../../../styles/global"
-import { Helmet } from "react-helmet"
+import Navbar from '../../../components/Navbar';
+import Footer from '../../../components/Footer';
+import { GlobalStyle } from '../../../styles/global';
+import { Helmet } from 'react-helmet';
 
 // ICONS
-import { FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa"
+import { FaGithub, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 
 export default function index() {
   return (
@@ -42,19 +42,19 @@ export default function index() {
         <Social>
           <FaGithub
             className="icon"
-            onClick={() => window.open("https://github.com/pedrovasalmeida")}
+            onClick={() => window.open('https://github.com/pedrovasalmeida')}
           />
           <FaLinkedinIn
             className="icon"
             onClick={() =>
               window.open(
-                "https://www.linkedin.com/in/pedro-vasconcellos-a272851a0/"
+                'https://www.linkedin.com/in/pedro-vasconcellos-a272851a0/',
               )
             }
           />
           <FaInstagram
             className="icon"
-            onClick={() => window.open("https://instagram.com/pedroohva")}
+            onClick={() => window.open('https://instagram.com/pedroohva')}
           />
         </Social>
         <Subtitle>
@@ -195,5 +195,5 @@ export default function index() {
       </Body>
       <Footer />
     </Container>
-  )
+  );
 }

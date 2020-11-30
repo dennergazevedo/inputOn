@@ -1,11 +1,3 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.com/docs/gatsby-config/
- */
-
-const googleAnalytics = require ('./config/googleanalytics');
-
 module.exports = {
   siteMetadata: {
     title: `InputOn`,
@@ -19,7 +11,6 @@ module.exports = {
         color: `#333`,
       },
     },
-    googleAnalytics,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -44,6 +35,12 @@ module.exports = {
       options:{
         displayName: process.env.NODE_ENV !== 'production',
       }
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "G-60Q6W13W6J",
+      },
     },
     {
       resolve: `gatsby-plugin-page-creator`,

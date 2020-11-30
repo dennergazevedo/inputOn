@@ -160,7 +160,7 @@ export default function UXUI() {
                     <p>
                         <span>Você já visitou sites onde não encontravam informações importantes como propostas de valores ou até mesmo o botão de contato?
                             Isso é um exemplo de <b>UI</b> mal construído. E isso pode levar seu cliente a procurar um concorrente no &nbsp;
-                            <a href="www.google.com">Google</a> e encontrando o que precisa.
+                            <a href="https://www.google.com" target="_blank" rel="noreferrer">Google</a> e encontrando o que precisa.
                         </span>
                     </p>
 

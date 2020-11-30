@@ -142,6 +142,7 @@ export const Text = styled.div`
 
     h3{
         margin-top: 20px;
+        color: ${props => props.theme.color};
 
         .icon{
             color: ${props => props.theme.primary};

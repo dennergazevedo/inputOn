@@ -29,10 +29,10 @@ export default function Destaque(props) {
                     <FaStar className="icon" />
                     <span>DESTAQUE</span>
                 </DestIcon>
-                <Title>
+                <Title onClick={() => navigate(`${api[props.id].url}`)}>
                     {api[props.id].title}
                 </Title>
-                <CreatedBy>
+                <CreatedBy onClick={() => navigate(`author/${api[props.id].createdLink}`)}>
                     <span>por <b>{api[props.id].createdBy}</b></span>
                 </CreatedBy>
                 <MenuIcon onClick={() => navigate(`${(api[props.id].menu).toLowerCase()}`)}>

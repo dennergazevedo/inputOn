@@ -135,6 +135,13 @@ export const Text = styled.div`
             color: ${props => props.theme.color};
         }
 
+        span{
+            a{
+                color: ${props => props.theme.color};
+                font-weight: 600;
+            }
+        }
+
         i{
             font-size: 12px;
         }

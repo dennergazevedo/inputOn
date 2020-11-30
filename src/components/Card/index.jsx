@@ -17,13 +17,13 @@ import api from '../../menu/api.json';
 
 export default function Card(props) {
     return (
-        <Container onClick={() => navigate(`/${api[props.id].url}`)}>
+        <Container onClick={() => navigate(`${api[props.id].url}`)}>
             <Image src={api[props.id].img} alt="Imagem" />
             <Title>
                 {api[props.id].title}
             </Title>
             <Body>
-                <CreatedBy onClick={() => navigate(`/author/${api[props.id].createdLink}`)}>
+                <CreatedBy onClick={() => navigate(`author/${api[props.id].createdLink}`)}>
                     <span>por <b>{api[props.id].createdBy}</b></span>
                 </CreatedBy>
                 <MenuIcon>

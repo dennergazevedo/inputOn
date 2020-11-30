@@ -23,19 +23,19 @@ import { navigate } from 'gatsby';
 export default function Destaque(props) {
     return (
         <Container>
-            <Image src={api[props.id].img} alt="Imagem" onClick={() => navigate(`/${api[props.id].url}`)}/>
+            <Image src={api[props.id].img} alt="Imagem" onClick={() => navigate(`${api[props.id].url}`)}/>
             <Body>
                 <DestIcon>
                     <FaStar className="icon" />
                     <span>DESTAQUE</span>
                 </DestIcon>
-                <Title onClick={() => navigate(`/${api[props.id].url}`)}>
+                <Title onClick={() => navigate(`${api[props.id].url}`)}>
                     {api[props.id].title}
                 </Title>
-                <CreatedBy onClick={() => navigate(`/author/${api[props.id].createdLink}`)}>
+                <CreatedBy onClick={() => navigate(`author/${api[props.id].createdLink}`)}>
                     <span>por <b>{api[props.id].createdBy}</b></span>
                 </CreatedBy>
-                <MenuIcon onClick={() => navigate(`/${(api[props.id].menu).toLowerCase()}`)}>
+                <MenuIcon onClick={() => navigate(`${(api[props.id].menu).toLowerCase()}`)}>
                     <span>{api[props.id].menu}</span>
                 </MenuIcon>
             </Body>

@@ -23,7 +23,8 @@ import {
     TitleText,
     Text,
     Date,
-    Code
+    Code,
+    Repo
 } from './styles.js'
 
 // ICONS
@@ -41,7 +42,8 @@ import {
     FaJsSquare,
     FaRegLaughSquint,
     FaCheck,
-    FaCodeBranch
+    FaCodeBranch,
+    FaGithub
 } from 'react-icons/fa';
 
 export default function ExpressNodeJs() {
@@ -536,6 +538,15 @@ export default function ExpressNodeJs() {
                         Mas não se desespere, darei algumas dicas de como continuar seu estudo.</span>
                     </p>
                 </Text>
+
+                <Repo onClick={() => window.open('https://github.com/dennergazevedo/apiexpress')}>
+                    <FaGithub className="icon" />
+                    <div>
+                        <span className="font">BAIXE AQUI</span>
+                        <span>CÓDIGO FONTE DA API REST</span>
+                    </div>
+                </Repo>
+
                 <Text>
                     <div>
                         <FaCodeBranch className="icon" />

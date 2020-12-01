@@ -272,3 +272,40 @@ export const Code = styled.div`
         color: #E54;
     }
 `;
+
+export const Repo = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+    background-color: ${props => props.theme.color};
+    color: ${props => props.theme.background};
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        span{
+            font-weight: 600;
+        }
+        
+        .font{
+            font-size: 10px;
+            margin-bottom: 10px;
+            font-weight: 400 !important;
+        }
+    }
+
+
+    .icon{
+        font-size: 50px;
+        color: ${props => props.theme.primary};
+        margin-right: 20px;
+    }
+`;

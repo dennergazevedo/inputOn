@@ -63,7 +63,7 @@ export default function ExpressNodeJs() {
                         <CreatedBy onClick={() => navigate(`/author/denner-azevedo`)}>
                             <span>por <b>Denner Azevedo</b></span>
                         </CreatedBy>
-                        <Date><FaBookmark className="icon"/> POSTADO EM 31/11/2020</Date>
+                        <Date><FaBookmark className="icon"/> POSTADO EM 01/12/2020</Date>
                         <MenuIcon>
                             <span>BACKEND</span>
                         </MenuIcon>

@@ -221,6 +221,7 @@ export const Text = styled.div`
     span{
         text-align: justify;
         line-height: 26px;
+        color: ${props => props.theme.color};
     }
 `;
 

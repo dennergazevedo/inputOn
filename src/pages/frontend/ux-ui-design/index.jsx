@@ -21,7 +21,8 @@ import {
     CreatedBy,
     MenuIcon,
     TitleText,
-    Text
+    Text,
+    Date
 } from './styles.js'
 
 // ICONS
@@ -32,7 +33,8 @@ import {
     FaLocationArrow,
     FaTimes,
     FaExclamation,
-    FaHandHoldingHeart
+    FaHandHoldingHeart,
+    FaBookmark
 } from 'react-icons/fa';
 
 export default function UXUI() {
@@ -54,6 +56,7 @@ export default function UXUI() {
                         <CreatedBy onClick={() => navigate(`/author/denner-azevedo`)}>
                             <span>por <b>Denner Azevedo</b></span>
                         </CreatedBy>
+                        <Date><FaBookmark className="icon"/> POSTADO EM 29/11/2020</Date>
                         <MenuIcon>
                             <span>FRONTEND</span>
                         </MenuIcon>

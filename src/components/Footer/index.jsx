@@ -42,7 +42,7 @@ export default function Footer() {
                     &nbsp;
                     |
                     &nbsp;
-                    <a href={`https://github.com/pedrovasalmeida`} target="_blank" rel="noreferrer">
+                    <a href={`/author/pedro-vasconcellos`}>
                         Pedro Vasconcellos
                     </a>
                 </span>

@@ -83,6 +83,21 @@ export const CreatedBy = styled.div`
     }
 `;
 
+export const Date = styled.span`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 10px;
+    margin-top: 10px;
+    color: ${props => props.theme.color};
+
+    .icon{
+        font-size: 12px;
+        margin-right: 5px;
+        color: ${props => props.theme.primary};
+    }
+`;
+
 export const MenuIcon = styled.div`
     display: flex;
     border-radius: 30px;

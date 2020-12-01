@@ -35,12 +35,13 @@ export default function Backend() {
 
     const [limit, setLimit] = useState(9);
 
-    let apiFront = [];
+    let apiBack = [];
 
     function handleApiBackend(){
         for(let i=0; i < api.length; i++){
             if(api[i].menu === 'BACKEND'){
-                apiFront.push(api[i]);
+                apiBack.push(api[i]);
+                console.log(api[i]);
             }
         }
     }
@@ -67,16 +68,16 @@ export default function Backend() {
             </Body>
             <ListCards>
                 {
-                    [...apiFront.keys()].map(id => (
+                    [...apiBack.keys()].map(id => (
                         <div key={id} hidden={Number(id) >= Number(limit)}>
-                            <Card id={id} />
+                            <Card id={id} api={apiBack[id]} />
                         </div>
                     ))
                 }
                 </ListCards>
 
                 {
-                Number(limit) < Number(apiFront.length)?
+                Number(limit) < Number(apiBack.length)?
                 <DivNextPage onClick={() => setLimit(Number(limit) + Number(9))}>
                     <MoreItems>
                     <BsArrowDownShort className="icon"/>

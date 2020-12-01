@@ -69,7 +69,7 @@ export default function Frontend() {
                 {
                     [...apiFront.keys()].map(id => (
                         <div key={id} hidden={Number(id) >= Number(limit)}>
-                            <Card id={id} />
+                            <Card id={id} api={apiFront[id]}/>
                         </div>
                     ))
                 }

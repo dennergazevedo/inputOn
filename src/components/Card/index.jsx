@@ -12,22 +12,19 @@ import {
     MenuIcon
 } from './styles';
 
-// API
-import api from '../../menu/api.json';
-
 export default function Card(props) {
     return (
-        <Container onClick={() => navigate(`${api[props.id].url}`)}>
-            <Image src={api[props.id].img} alt="Imagem" />
+        <Container onClick={() => navigate(`${props.api.url}`)}>
+            <Image src={props.api.img} alt="Imagem" />
             <Title>
-                {api[props.id].title}
+                {props.api.title}
             </Title>
             <Body>
-                <CreatedBy onClick={() => navigate(`author/${api[props.id].createdLink}`)}>
-                    <span>por <b>{api[props.id].createdBy}</b></span>
+                <CreatedBy onClick={() => navigate(`author/${props.api.createdLink}`)}>
+                    <span>por <b>{props.api.createdBy}</b></span>
                 </CreatedBy>
                 <MenuIcon>
-                    <span>{api[props.id].menu}</span>
+                    <span>{props.api.menu}</span>
                 </MenuIcon>
             </Body>
         </Container>

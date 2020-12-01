@@ -6,6 +6,7 @@ export const Container = styled.div`
     height: auto;
     max-width: 100vw;
     min-height: 100vh;
+    height: 100%;
     justify-content: space-between;
     margin: 0;
     padding: 0;
@@ -17,9 +18,9 @@ export const ListCards = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     width: 80vw;
-    height: auto;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
 `;
 
 const float = keyframes`

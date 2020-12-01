@@ -23,7 +23,7 @@
     "createdLink": "pedro-vasconcellos",
     "menu": "BACKEND",
     "url": "/backend/api-rest-restful",
-    "destaque": true,
+    "destaque": false,
     "img": "https://i.imgur.com/6OPDSvo.jpg"
   }
 ]

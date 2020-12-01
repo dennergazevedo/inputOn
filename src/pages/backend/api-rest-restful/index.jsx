@@ -1,273 +1,307 @@
 import React from 'react'
 
 // COMPONENTS
-import Navbar from '../../../components/Navbar';
-import Footer from '../../../components/Footer';
-import CardDenner from '../../../components/CardDenner';
+import Navbar from '../../../components/Navbar'
+import Footer from '../../../components/Footer'
+import CardPedro from '../../../components/CardPedro'
 
 // SERVICES
-import { navigate } from 'gatsby';
+import { navigate } from 'gatsby'
 
 // STYLES GLOBAL
-import { GlobalStyle } from '../../../styles/global';
-import { Helmet } from "react-helmet";
+import { GlobalStyle } from '../../../styles/global'
+import { Helmet } from 'react-helmet'
 
 // STYLED COMPONENTS
 import {
-    Container,
-    Body,
-    Title,
-    Imagem,
-    CreatedBy,
-    MenuIcon,
-    TitleText,
-    Text,
-    Date
+  Container,
+  Body,
+  Title,
+  Imagem,
+  CreatedBy,
+  MenuIcon,
+  TitleText,
+  Text,
+  Date,
 } from './styles.js'
 
 // ICONS
 import {
-    FaLightbulb,
-    FaStopwatch,
-    FaClock,
-    FaLocationArrow,
-    FaTimes,
-    FaExclamation,
-    FaHandHoldingHeart,
-    FaBookmark
-} from 'react-icons/fa';
+  FaLightbulb,
+  FaStopwatch,
+  FaBookmark,
+  FaServer,
+  FaQuestion,
+  FaCheck,
+} from 'react-icons/fa'
 
 export default function UXUI() {
+  return (
+    <Container>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>InputOn - APIs, REST e RESTful.</title>
+        <link rel="canonical" href="https://www.inputon.com.br/ux-ui-design" />
+      </Helmet>
+      <GlobalStyle />
+      <Navbar />
+      <Body>
+        <Title>
+          <Imagem src="https://i.imgur.com/6OPDSvo.jpg" alt="API REST" />
+          <div className="titleRight">
+            <TitleText>Um pouco sobre APIs, REST e RESTful.</TitleText>
+            <CreatedBy onClick={() => navigate(`/author/pedro-vasconcellos`)}>
+              <span>
+                por <b>Pedro Vasconcellos</b>
+              </span>
+            </CreatedBy>
+            <Date>
+              <FaBookmark className="icon" /> POSTADO EM 1/12/2020
+            </Date>
+            <MenuIcon>
+              <span>BACKEND</span>
+            </MenuIcon>
+          </div>
+        </Title>
+        <Text>
+          <div>
+            <FaLightbulb className="icon" />
+            <h2>INTRODUÇÃO</h2>
+          </div>
+          <p>
+            <span>
+              Foi com a criação da <b>World Wide Web</b>, por Roy Fielding, e os
+              posteriores protocolos de comunicação HTTP, que se descobriu o
+              verdadeiro potencial da internet.
+            </span>
+          </p>
 
-    return (
-        <Container>
-            <Helmet>
-                <meta charSet="utf-8" />
-                <title>InputOn - UX e UI design</title>
-                <link rel="canonical" href="https://www.inputon.com.br/ux-ui-design" />
-            </Helmet>
-            <GlobalStyle />
-            <Navbar />
-            <Body>
-                <Title>
-                    <Imagem src='https://i.imgur.com/xyorwuR.png' alt="UX/UI Design" />
-                    <div className="titleRight">
-                        <TitleText>UX e UI design: entenda finalmente.</TitleText>
-                        <CreatedBy onClick={() => navigate(`/author/denner-azevedo`)}>
-                            <span>por <b>Denner Azevedo</b></span>
-                        </CreatedBy>
-                        <Date><FaBookmark className="icon"/> POSTADO EM 29/11/2020</Date>
-                        <MenuIcon>
-                            <span>FRONTEND</span>
-                        </MenuIcon>
-                    </div>
-                </Title>
-                <Text>
-                    <div>
-                        <FaLightbulb className="icon"/>
-                        <h2>INTRODUÇÃO</h2>
-                    </div>
-                    <p>
-                        <span>O design desempenha um papel essencial para o sucesso de qualquer estratégia de Marketing, seja digital ou não.</span>
-                    </p>
+          <p>
+            <span>
+              A <b>World Wide Web</b> é praticamente toda a internet como
+              conhecemos hoje, mas não foi sempre assim. A internet foi
+              desenvolvida primeiramente apenas como uma rede global de
+              computadores interligados utilizando de um conjunto próprio de
+              protocolos. <i>(é um papo pra se aprofundar em outro post xD)</i>.
+              Já o <b>HTTP</b>{' '}
+              <i>
+                (Hypertext Transfer Protocol, ou Protocolo de Trasferência de
+                Hipertexto)
+              </i>
+              , como o nome sugere, é um protocolo de transferência de dados que
+              define as <b>regras/principios</b> para troca de informações entre
+              aplicações e clientes, através de requisições e respostas. Dentro
+              do HTTP temos os chamados "verbos", que são os métodos servidos
+              por esse protocolo. Temos, entre eles, o{' '}
+              <b>GET, POST, PUT, PATCH e DELETE</b>. Estes são os mais usados,
+              mas não são os únicos. Em breve teremos um post falando mais sobre
+              o HTTP.
+            </span>
+          </p>
 
-                    <p>
-                        <span>A questão é que nem todos conseguem notar esta necessidade e muitas vezes não sabem como usar tal ferramenta na estratégia digital
-                            da empresa.
-                        </span>
-                    </p>
+          <p>
+            <span>
+              A partir daí, tornou-se problemático para os desenvolvedores
+              conseguirem, de forma eficaz, permitir essa comunicação (podendo
+              ser entre 2 aplicações, por exemplo). Sendo assim, foram surgindo
+              ao longos dos anos diversas alternativas e formas de se realizar
+              essa comunicação, que posteriormente foram denominadas <b>API</b>
+              's. Essas APIs tinham um funcionamento básico: fornecer um ponto
+              de acesso entre o sistema (aplicação) e seu cliente
+              (usuário/aplicação).
+            </span>
+          </p>
 
-                    <p>
-                        <span>Mas quando bem usado, ferramentas como essas podem ser poderosas para que sua empresa, mesmo que pequena seja notada. Não é atoa 
-                            que empresas gigantes no mundo inteiro se preocupam tanto com os mínimos detalhes de seu marketing, isso inclui a construção 
-                            com uma interface agradável para seus clientes.
-                        </span>
-                    </p>
+          <p>
+            <FaStopwatch className="icon" />
+            <span className="time">TEMPO MÉDIO DE LEITURA: 5 MINUTOS.</span>
+          </p>
+        </Text>
+        <Text>
+          <div>
+            <FaServer className="icon" />
+            <h2>O que é uma API?</h2>
+          </div>
+          <p>
+            <span>
+              De forma simples: Uma API utiliza dos verbos HTTP para realizar{' '}
+              <b>requisições</b> e enviar <b>respostas</b>, afim de permitir o
+              consumo de dados de uma certa aplicação.
+            </span>
+          </p>
 
-                    <p>
-                        <span>Mas o maior problema é, como usar isso nos meus projetos? Vamos explicar detalhes que irão clarear suas ideias sobre &nbsp;
-                            <b>UI e UX design</b>.
-                        </span>
-                    </p>
-                    
-                    <p>
-                        <FaStopwatch className="icon"/>
-                        <span className="time">TEMPO MÉDIO DE LEITURA: 3 MINUTOS.</span>
-                    </p>
-                </Text>
-                <Text>
-                    <div>
-                        <FaClock className="icon"/>
-                        <h2>O que é UX Design?</h2>
-                    </div>
-                    <p>
-                        <span>O termo <b>UX</b> vem de <b>User eXperience</b> <i>(Experiência do Usuário)</i>. Se trata, basicamente, de como será a 
-                        experiência de um usuário antes, durante e depois de consumir algum serviço digital que sua empresa oferece, mesmo que 
-                        o seu negócio não seja 100% digital.
-                        </span>
-                    </p>
-                    
-                    <h3>
-                        Qual o papel do UX design no Marketing Digital?
-                    </h3>
+          <p>
+            <span>
+              Significa <b>Application Programming Interface</b>, ou{' '}
+              <b>Interface de Programação de Aplicações</b> e nada mais é que um
+              software regido de um conjunto de <b>padrões</b> e{' '}
+              <b>instruções</b> para servir dados à um cliente. É uma forma de
+              conseguir utilizar informações de uma dada aplicação, sem conhecer
+              a fundo seus detalhes de implementação.
+            </span>
+          </p>
 
-                    <p>Garantir uma boa experiência do seu usuário, um passo fundamental é que ele continue interessado até que consuma o seu produto. 
-                        Dado o fato de que ele acessou o seu conteúdo digital, é importante também que ele siga interessado. Ai que entra o UX design.
-                    </p>
+          <p>
+            Existem diversos tipos e classificações de APIs, como públicas,
+            privadas, web, locais, entre outras. O nosso foco hoje é nas Web
+            APIs, utilizando o padrão REST que já vai ser falado.
+          </p>
 
-                    <p>Imagine que você possui um e-commerce e seu cliente precisa de entrar em contato com um vendedor, ele procura uma maneira de 
-                        entrar em contato por 10 minutos, quando encontra o formulário é por e-mail e pode demorar até 2 dias para ter um retorno, isso 
-                        quando o formulário encontra-se defeituoso.
-                    </p>
+          <p>
+            <span>
+              Aqui vão os "significados" dos verbos HTTP citados na introdução,
+              e que são utilizados pelas Web APIs:
+            </span>
+          </p>
 
-                    <p>Na verdade é que em um caso destes, mesmo ele tendo conseguido o contato após muita procura, a sua disposição de continuar já não é mais 
-                        a mesma, pode acabar se frustrando ou desistindo do processo antes mesmo do contato.
-                    </p>
+          <p>
+            <span>
+              <li>
+                <b>GET</b>: obtém dados do servidor em questão;
+              </li>
+              <li>
+                <b>POST</b>: cria novos dados no servidor;
+              </li>
+              <li>
+                <b>PUT</b>: atualiza (de forma completa) dados já existentes;
+              </li>
+              <li>
+                <b>PATCH</b>: atualiza (de forma parcial) dados já existentes;
+              </li>
+              <li>
+                <b>DELETE</b>: remove dados no servidor;
+              </li>
+            </span>
+          </p>
 
-                    <p>Em outras palavras, <b>UX design</b> é responsável por gerar uma boa experiência ao usuário, fazendo com que 
-                        encontre o que precisa rápido, fácil e com uma aparência e funcionamento agradável.
-                    </p>
-                </Text>
-                <Text>
-                    <div>
-                        <FaLocationArrow className="icon"/>
-                        <h2>O que é UI Design?</h2>
-                    </div>
-                    <p>
-                        <span><b>UI design</b> é uma expressão derivada de <b>User Interface</b> <i>(Interface do Usuário)</i> e é responsável por 
-                        guiar o usuário pela sua aplicação durante o tempo que se manter online.
-                        </span>
-                    </p>
+          <br />
+          <br />
 
-                    <p>
-                        <span>Vamos usar um exemplo para simplificar o entendimento.</span>
-                    </p>
+          <div>
+            <FaQuestion className="icon" />
+            <h2>E o que seria esse padrão REST?</h2>
+          </div>
 
-                    <p>
-                        <span>Assim que o usuário entra em seu site, sua aplicação deve levar ele onde ele quer baseado no link que ele acessou. Se 
-                            você fez um anuncio sobre um produto <b>Y</b> a página deve facilitar para que o cliente conheça o produto e consiga um contato 
-                            de forma rápida sobre o produto que ele clicou.
-                        </span>
-                    </p>
+          <p>
+            <b>REST</b> é uma arquitetura de desenvolvimento de APIs que dita um
+            conjunto de restrições para o uso dos protocolos de requisição e
+            resposta do HTTP.
+          </p>
 
-                    <h3>
-                        Qual o papel do UI design no Marketing Digital?
-                    </h3>
+          <p>
+            Significa <b>Representational State Transfer</b>, ou{' '}
+            <b>Transferência de Estado Representacional</b> e não é, como muitos
+            acham, um protocolo de comunicação, mas sim um conjunto de
+            princípios arquiteturais. E pra já retirar a dúvida de muitos: A
+            única diferença entre os termos REST e <b>RESTful</b> é que REST é o
+            conjunto de regras, enquanto <b>RESTful</b> é aquele serviço que
+            consegue aplicar essas regras.
+          </p>
 
-                    <p>
-                        <span>Se o seu site não guiar o usuário da forma correta, ou até mesmo dificultar as ações do usuário, este canal de vendas torna-se 
-                            inútil, pois seu cliente dificilmente irá pelo caminho certo sem ajuda e isso o fará frustrado.
-                        </span>
-                    </p>
+          <p>Deixo abaixo as restrições dadas pela arquitetura REST:</p>
 
-                    <p>
-                        <span>Você já visitou sites onde não encontravam informações importantes como propostas de valores ou até mesmo o botão de contato?
-                            Isso é um exemplo de <b>UI</b> mal construído. E isso pode levar seu cliente a procurar um concorrente no&nbsp;
-                            <a href="https://www.google.com" target="_blank" rel="noreferrer">Google</a> e encontrando o que precisa.
-                        </span>
-                    </p>
+          <p>
+            <li>
+              <b>client-server (cliente-servidor)</b>: é a restrição mais
+              básica. O objetivo geral é separar as responsabilidades de uma
+              aplicação, deixando a preocupação de regras de negócio, acesso ao
+              banco de dadose etc. com o backend (servidor), enquanto a parte de
+              interface, UI e UX (e tem um post do Denner falando sobre isso
+              aqui.) com o frontend (cliente). Basicamente, o cliente envia uma
+              requisição ao servidor (request), ele trata essa requisição e
+              retorna uma resposta ao cliente (response).
+            </li>
+            <br />
+            <li>
+              <b>stateless (sem estado)</b>: ressalta a importância da
+              indepedência das requisições. O servidor não deve guardar nenhum
+              estado, tornando cada requisição http única e suficientemente
+              completa. O estado deve ser guardado no lado do cliente
+              (frontend).
+            </li>
+            <br />
+            <li>
+              <b>cacheable ("cacheável")</b>: uma resposta (response) deve
+              dizer, mesmo que implicitamente, se a informação pode ou não ser
+              guardada em cache. Esse cache deverá ser salvo e mantido pelo
+              cliente.
+            </li>
+            <br />
+            <li>
+              <b>interface uniforme</b>: este, por sua vez, é um principio
+              definido por algumas restrições (com o objetivo de deixar o
+              componente mais simples e mais fácil de, posteriormente, ser
+              refatorado):
+            </li>
+            <div style={{ flexDirection: 'column', marginLeft: '80px' }}>
+              <ul>
+                <li>
+                  <b>Identificar os recursos</b>: URI única, que permite a
+                  identificação do recurso acessado;
+                </li>
+                <li>
+                  <b>Representação dos recursos</b>: Forma com que a resposta
+                  será devolvida ao cliente (podendo ser um HTML, XML, JSON,
+                  entre muitas outras);
+                </li>
+                <li>
+                  <b>Resposta auto-descritivas</b>: a necessidade de metadados
+                  nas requisições e respostas, afim de melhor identificar o
+                  recurso;
+                </li>
+                <li>
+                  <b>Hypermedia</b>: muito pouco utilizado, dita a necessidade
+                  de uma resposta possuir também um hiperlink, que permite a
+                  quem está consumindo a API navegar pelos recursos;
+                </li>
+                <li>
+                  <b>Sistema de camadas</b>: diz que a aplicação deve ser
+                  construida em camadas, garantindo a escalabilidade da
+                  aplicação;
+                </li>
+              </ul>
+            </div>
+            <li>
+              <b>Code-On-Demand</b>: é um principio opcional, então vou deixar
+              passar este;
+            </li>
+          </p>
 
-                    <p>
-                        <span>Então <b>UI</b> e <b>UX</b> são a mesma coisa? Errado! São ligados, pois uma navegação ruim torna difícil tornar a experiência 
-                        do usuário em uma boa experiência.
-                        </span>
-                    </p>
-                </Text>
+          <p>
+            Existe também uma escala chamada <b>Richardson Maturity Model</b>,
+            que define níveis de maturidade para APIs serem consideradas
+            RESTful, além de seguir estritamente os principios acima. Não
+            entrarei em muitos detalhes para o post não virar um livro, mas essa
+            escala é definida em níveis, sendo que para atingir um nível de
+            maturidade acima é necessário ter passado pelos níveis anteriores.
+            Você pode ler mais sobre essa escala{' '}
+            <a href="https://martinfowler.com/articles/richardsonMaturityModel.html">
+              aqui
+            </a>
+            .
+          </p>
+        </Text>
 
-                <Text>
-                    <div>
-                        <FaTimes className="icon"/>
-                        <h2>3 dicas fundamentais de UX e UI design</h2>
-                    </div>
-                    <p>
-                        <span>Essas 3 dicas vão deixar mais claras a diferença dos dois e entender bem cada um deles.
-                        </span>
-                    </p>
-                    <h3>
-                        <b>1</b> - UI só existe no FRONTEND.
-                    </h3>
-                    <p>
-                        <span>
-                            Como o próprio nome diz, a <b>Interface do Usuário</b> tem a ver com as construção visual do seu site ou aplicativo.
-                            <b>Sem uma tela, o UI não existe.</b> Já o <b>UX design</b>, em alguns casos não tem haver diretamente com a tela e sim com o 
-                            funcionamento do seu site/aplicativo.
-                        </span>
-                    </p>
-                    <h3>
-                        <b>2</b> - UI são as pernas, UX o coração.
-                    </h3>
-                    <p>
-                        <span>
-                            Enquanto o <b>UI</b> guia seu usuário ára que ele saiba o que fazer, o papel do UX é tornar agradável a navegação do usuário.
-                        </span>
-                    </p>
-                    <p>
-                        <span>
-                            Tome muito cuidado, o site mais lindo do mundo não vai tornar a experiência do usuário agradável se ele não encontrar o que 
-                            procura e da maneira que espera.
-                        </span>
-                    </p>
+        <Text>
+          <div>
+            <FaCheck className="icon" />
+            <h2>Conclusão</h2>
+          </div>
+          <p>
+            Vimos que o padrão REST para desenvolver Web APIs é escalável,
+            organizado e fácil. E o que separa uma API REST de se tornar RESTful
+            são apenas alguns princípios não tão complexos de serem aplicados.
+            Em breve falaremos sobre o formato JSON, utilizado nas respostas
+            enviadas pela aplicação, e como é uma ótima (e leve) forma de
+            entregar dados.
+          </p>
 
-                    <h3>
-                        <b>3</b> - Conheça seu público alvo.
-                    </h3>
-                    <p>
-                        <span>
-                            Vamos novamente com um exemplo para entender melhor esta terceira dica:
-                        </span>
-                    </p>
-                    <p>
-                        <span>
-                            Você tem um e-commerce que vende produtos para cegos, como bengalas, coleiras para cachorros guia e etc. Se você fizer o site pensando 
-                            em pessoas com uma boa visão, você estará ignorando tudo que conversamos acima. O site precisa ser agradável a todos, mas principalmente 
-                            ao seu público alvo.
-                        </span>
-                    </p>
-                </Text>
+          <p>Até a próxima!</p>
+        </Text>
 
-                <Text>
-                    <div>
-                        <FaExclamation className="icon"/>
-                        <h2>Porque devo usar UI e UX design em conjunto?</h2>
-                    </div>
-                    <p>
-                        <span>Você já deve ter notado o valor de ambas partes para o sucesso de uma estratégia digital, mas qual devo usar? Qual a melhor 
-                            opção, <b>UX design</b> ou <b>UI design</b>?
-                        </span>
-                    </p>
-                    <p>
-                        <span>A responsta é simples, os dois! Cada um tem uma função importante e o conjunto pode ser uma ferramenta fundamental para o sucesso 
-                            de sua marca na internet.
-                        </span>
-                    </p>
-                    <p>
-                        <span>A interface bem projetada e conhecimento sobre seu público alvo e como ele se comporta pode fazer com que você converta muito 
-                            mais clientes, mesmo que não seja de imediato, se o trabalho de <b>UI</b> e <b>UX</b> for bem feito, a chance de seu cliente voltar 
-                            é grande.
-                        </span>
-                    </p>
-
-                    <p>
-                        <span>Preocupar com seus clientes e com a experiência que ele vai ter na sua plataforma fortalece sua marca em relação aos seus 
-                            concorrentes. Digitalmente falando, a concorrência é sempre ampla, você não pode dar a opção de seu cliente procurar outros locais 
-                            pois ele vai encontrar o que precisa. Seja direto, dê atenção e lembre-se, menos é mais! ;)
-                        </span>
-                    </p>
-                </Text>
-
-                <Text>
-                    <h3>
-                        E ai, gostou desse post?
-                    </h3>
-                    <h3>
-                        Espero que tenha levado este conhecimento consigo hoje e não se esqueça da gente. <FaHandHoldingHeart className="icon"/>
-                    </h3>
-                </Text>
-
-                <CardDenner />
-                
-            </Body>
-            <Footer />
-        </Container>
-    )
+        <CardPedro />
+      </Body>
+      <Footer />
+    </Container>
+  )
 }

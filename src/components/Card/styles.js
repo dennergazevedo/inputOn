@@ -43,11 +43,11 @@ export const Body = styled.div`
 `;
 
 export const Title = styled.h1`
-    font-size: 30px;
+    font-size: 24px;
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 40px;
+    margin-right: 40px;
     color: ${props => props.theme.color};
 
     @media only screen and (max-width: 800px){

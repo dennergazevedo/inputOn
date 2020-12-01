@@ -79,8 +79,8 @@ export default function ExpressNodeJs() {
                         </span>
                     </p>
                     <p>
-                        <i>Caso você tenha caído aqui de paraquedas e não sabe o que é uma API REST ou RESTful, recomendo que você dê uma lida sobre 
-                            antes de começar este tutorial.
+                        <i>Caso você tenha caído aqui de paraquedas e não sabe o que é uma API REST ou RESTful, recomendo que você dê uma lida no nosso post 
+                            <a href="/backend/api-rest-restful" target="_blank" rel="noreferrer"> Um pouco sobre APIs, REST e RESTful.</a>.
                         </i>
                     </p>
                 </Text>
@@ -146,7 +146,7 @@ export default function ExpressNodeJs() {
                     <p>
                         <span>
                         Assim que acabar o download do instalador não tem mais segredos, é só "ler e aceitar" os termos e avançar até que o instalador 
-                        comece a instalar e após aguarde a finalização.
+                        comece a instalar aguarde o final da instalação.
                         </span>
                     </p>
                 </Text>
@@ -243,12 +243,12 @@ export default function ExpressNodeJs() {
                     </div>
                     <p>
                         <span>Me perdoa por fazer você esperar até aqui, mas era fundamental que você tivesse o NodeJS e um gerenciador de pacotes instalados! 
-                            Mas agora começa de verdade o assunto do POST e que você está aqui para ver.
+                            Mas agora começa de verdade a criação da API.
                         </span>
                     </p>
 
                     <p>
-                        <span>O primeiro passo para iniciar o nosso projeto é criar o <b>package.json</b> que é responsável por armazenas várias informações 
+                        <span>O primeiro passo para iniciar o nosso projeto é criar o <b>package.json</b> que é responsável por armazenar várias informações 
                         importantes do nosso projeto, como engines, scripts de ambientes, dependências e outras coisas...
                         </span>
                         <span> Para criar o <b>package.json</b> basta ir até o diretório que irá criar o seu projeto usando o seu terminal
@@ -387,7 +387,7 @@ export default function ExpressNodeJs() {
                         <span>&emsp;{`}`}</span>
                     </Code>
 
-                    <span>A função <b>middlewares()</b> nesse exemplo, é responsável por configurar o <b>Express</b> que usaremos o formato <b>JSON</b> em 
+                    <span>A função <b>middlewares()</b> nesse exemplo, é responsável por configurar o <b>Express</b> para usarmos o formato <b>JSON</b> em 
                     nossa aplicação.</span>
 
                     <Code>
@@ -446,7 +446,7 @@ export default function ExpressNodeJs() {
 
                     <p>
                         <span>Agora vamos configurar nossas rotas, ou seja, para isso criarei uma rota raiz (/) do tipo <b>GET</b> para 
-                        poder-mos visualizar ela no nosso navegador, para isso, precisamos criar um arquivo <b>index.js</b> dentro da pasta 
+                        visualizar ela no nosso navegador, para isso, precisamos criar um arquivo <b>index.js</b> dentro da pasta 
                         <b> routes</b> que está dentro de <b>src</b></span> e colocar o código abaixo:
                     </p>
 
@@ -492,7 +492,7 @@ export default function ExpressNodeJs() {
                         POST.
                     </span>
                     <br/>
-                    <span>Usamos a função <b>status()</b> da <b>RESPOSTA</b> para indicar o código 200, que presenta o código <b>OK</b> de uma 
+                    <span>Usamos a função <b>status()</b> da <b>RESPOSTA</b> para indicar o código 200, que representa o código <b>OK</b> de uma 
                         requisição <b>HTTP</b> que também é assunto para outro POST rsrs. Mas só para dar um gostinho de 'quero mais', existem códigos HTTP 
                         para determinar se a <b>REQUISIÇÃO</b> foi bem-sucedida(200), mal-formada(400), não autorizada(401), não encontrada(404) 
                         dentre outros.
@@ -534,7 +534,7 @@ export default function ExpressNodeJs() {
                     <span>O seu retorno deve ser o <b>JSON</b> que está na função <b>send()</b>.</span>
 
                     <p>
-                        <span>Esta pronta sua API com <b>EXPRESS</b> e já pode usar da maneira que bem entender, porém este conhecimento é basico demais. 
+                        <span>Sua API com <b>EXPRESS</b> está pronta e já pode usar da maneira que bem entender, porém esta API é basica demais. 
                         Mas não se desespere, darei algumas dicas de como continuar seu estudo.</span>
                     </p>
                 </Text>

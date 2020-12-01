@@ -58,7 +58,7 @@ export default function Home() {
                   {
                     !api[id].destaque?
                     <div key={id} hidden={Number(id) > Number(limit)}>
-                      <Card id={id} />
+                      <Card id={id} api={api[id]}/>
                     </div>
                     :
                     null

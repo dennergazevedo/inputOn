@@ -166,18 +166,21 @@ export const Text = styled.div`
         width: 90%;
         margin: 10px;
         align-self: center;
+        min-width: 300px;
     }
 
     .small{
         width: 30%;
         margin: 10px;
         align-self: center;
+        min-width: 300px;
     }
 
     .medium{
         width: 50%;
         margin: 10px;
         align-self: center;
+        min-width: 300px;
     }
 
 
@@ -225,6 +228,7 @@ export const Code = styled.div`
     display: flex;
     flex-direction: column !important;
     align-items: flex-start !important;
+    text-align: start !important;
     background-color: ${props => props.theme.color};
     padding: 20px;
     width: 100%;
@@ -236,6 +240,7 @@ export const Code = styled.div`
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
+        text-align: start !important;
         align-items: center;
         color: ${props => props.theme.background};
         i{

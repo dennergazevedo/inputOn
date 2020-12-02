@@ -47,7 +47,7 @@ export default function UXUI() {
       <Navbar />
       <Body>
         <Title>
-          <Imagem src="https://i.imgur.com/6OPDSvo.jpg" alt="API REST" />
+          <Imagem src="https://i.imgur.com/1ORqPM9.png" alt="API REST" />
           <div className="titleRight">
             <TitleText>Um pouco sobre APIs, REST e RESTful.</TitleText>
             <CreatedBy onClick={() => navigate(`/author/pedro-vasconcellos`)}>

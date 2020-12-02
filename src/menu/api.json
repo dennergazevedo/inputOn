@@ -24,6 +24,15 @@
     "menu": "BACKEND",
     "url": "/backend/api-rest-restful",
     "destaque": false,
-    "img": "https://i.imgur.com/6OPDSvo.jpg"
+    "img": "https://i.imgur.com/1ORqPM9.png"
+  },
+  {
+    "title": "Sucrase no NodeJS.",
+    "createdBy": "Denner Azevedo",
+    "createdLink": "denner-azevedo",
+    "menu": "BACKEND",
+    "url": "/backend/sucrase-with-nodejs",
+    "destaque": false,
+    "img": "https://i.imgur.com/q1en1Pd.png"
   }
 ]

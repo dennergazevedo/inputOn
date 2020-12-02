@@ -84,7 +84,7 @@ export default function SucraseNodeJS() {
                     <p>
                         <span>
                             O <b>Sucrase</b> é responsável por fazer a transpilação do código, em outras palavras, ele "traduz" o código mais recente do 
-                            <b> JavaScript</b>, para um padrão já suportado. Essa ferramenta é muito usada em ambiente de desenvolvimento e é uma ótima 
+                            <b> JavaScript</b>, para um padrão já suportado no <b>NodeJS</b>. Essa ferramenta é muito usada em ambiente de desenvolvimento e é uma ótima 
                             alternativa para substituir o <b>Babel</b>.
                         </span>
                     </p>

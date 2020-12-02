@@ -186,7 +186,7 @@ export default function SucraseNodeJS() {
 
                     <p>
                         <span>
-                            O <b>execMap</b> é uma opção que substitui a flag --exec e permite que você especifique os binários em um arquivo <b>JSON</b> 
+                            O <b>execMap</b> é uma opção que substitui a flag --exec e permite que você especifique os binários em um arquivo <b>JSON </b> 
                             para determinadas extensões de arquivos, no exemplo usaremos o <b>sucrase-node</b> em todas extesões <b>.js</b>.
                         </span>
                     </p>

@@ -200,7 +200,7 @@ export const Code = styled.div`
         justify-content: flex-start;
         text-align: start !important;
         align-items: center;
-        color: ${props => props.theme.background};
+        color: ${props => props.theme.background} !important;
         i{
             font-size: 12px;
             margin-right: 20px;

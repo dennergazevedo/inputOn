@@ -34,5 +34,14 @@
     "url": "/backend/sucrase-with-nodejs",
     "destaque": false,
     "img": "https://i.imgur.com/q1en1Pd.png"
+  },
+  {
+    "title": "InputOn - Template CRA ReactJS.",
+    "createdBy": "Denner Azevedo",
+    "createdLink": "denner-azevedo",
+    "menu": "FRONTEND",
+    "url": "/frontend/template-cra-dnr",
+    "destaque": false,
+    "img": "https://i.imgur.com/JGPqGRR.png"
   }
 ]

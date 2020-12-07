@@ -43,5 +43,14 @@
     "url": "/frontend/template-cra-dnr",
     "destaque": false,
     "img": "https://i.imgur.com/JGPqGRR.png"
+  },
+  {
+    "title": "ReactJS - Hooks, Props e States.",
+    "createdBy": "Denner Azevedo",
+    "createdLink": "denner-azevedo",
+    "menu": "FRONTEND",
+    "url": "/frontend/react-hooks-props-state",
+    "destaque": false,
+    "img": "https://i.imgur.com/mclcMEJ.png"
   }
 ]

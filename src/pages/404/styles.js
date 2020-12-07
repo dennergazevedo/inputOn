@@ -12,6 +12,56 @@ export const Container = styled.div`
     background-color: ${props => props.theme.background};
 `;
 
+export const Logo = styled.div`
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+`;
+
+export const BodyLogo = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    
+    span{
+        color: ${props => props.theme.color};
+        font-size: 12px;
+    }
+
+    .title{
+        font-size: 50px;
+        font-weight: 600;
+        color: ${props => props.theme.primary};
+
+        b{
+            color: ${props => props.theme.color};
+        }
+    }
+`;
+
+const float = keyframes`
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-30px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+`;
+
+export const Logomarca = styled.img`
+    width: 200px;
+    height: auto;
+    transition: 0.5s all;
+    transform: translatey(0px);
+    animation: 2s ${float} ease-in-out infinite;
+`;
+
 export const Body = styled.div`
     display: flex;
     flex-direction: column;
@@ -29,30 +79,6 @@ export const Oops = styled.div`
     @media only screen and (max-width: 800px){
         font-size: 30px;
         text-align: center;
-    }
-`;
-
-const float = keyframes`
-    0% {
-        transform: translatey(0px);
-    }
-    50% {
-        transform: translatey(-20px);
-    }
-    100% {
-        transform: translatey(0px);
-    }
-`;
-
-export const NotFound = styled.div`
-    color: ${props => props.theme.color};
-    font-size: 250px;
-    font-weight: 700;
-    transform: translatey(0px);
-	animation: 6s ${float} ease-in-out infinite;
-
-    @media only screen and (max-width: 800px){
-        font-size: 150px;
     }
 `;
 

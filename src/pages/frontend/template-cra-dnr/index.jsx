@@ -65,7 +65,7 @@ export default function TemplateDnr() {
             <Navbar />
             <Body>
                 <Title>
-                    <Imagem src='https://i.imgur.com/JGPqGRR.png' alt="UX/UI Design" />
+                    <Imagem src='https://i.imgur.com/JGPqGRR.png' alt="Template CRA" />
                     <div className="titleRight">
                         <TitleText>Create React App - Template na medida.</TitleText>
                         <CreatedBy onClick={() => navigate(`/author/denner-azevedo`)}>

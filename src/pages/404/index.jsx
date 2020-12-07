@@ -5,14 +5,19 @@ import {
   Container,
   Body,
   Oops,
-  NotFound,
-  Button
+  Logo,
+  Button,
+  Logomarca,
+  BodyLogo,
 } from './styles';
 
 // COMPONENTS
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import { Helmet } from "react-helmet";
+
+// ASSETS
+import logo from '../../assets/img/logo.png';
 
 // STYLES GLOBAL
 import { GlobalStyle } from '../../styles/global';
@@ -29,11 +34,18 @@ export default function Home() {
             <GlobalStyle />
             <Navbar />
             <Body>
-                <NotFound>
-                    404
-                </NotFound>
+                <Logo>
+                    <Logomarca src={logo} alt="Logo" />
+                    <BodyLogo>
+                        <span>404 NOT FOUND</span>
+                        <span className="title">
+                        Oops
+                        <b>!</b>
+                        </span>
+                    </BodyLogo>
+                </Logo>
                 <Oops>
-                    Oops, página não encontrada!
+                    Página não encontrada!
                 </Oops>
                 <Button onClick={() => window.location.href="/"}>
                     Ir para Página Inicial

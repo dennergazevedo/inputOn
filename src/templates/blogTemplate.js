@@ -35,23 +35,23 @@ import { FaBookmark } from 'react-icons/fa'
 // ASSETS
 import logo from '../assets/img/logo.png'
 
-import api from '../menu/api.json';
+import api from '../menu/api.json'
 
 export default function Template({ data }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
 
-  let apiItem;
+  let apiItem
 
-  function handleApiFront(){
-      for(let i=0; i < api.length; i++){
-          if(api[i].url === frontmatter.slug){
-              apiItem = api[i];
-          }
+  function handleApiFront() {
+    for (let i = 0; i < api.length; i++) {
+      if (api[i].url === frontmatter.slug) {
+        apiItem = api[i]
       }
+    }
   }
 
-  handleApiFront();
+  handleApiFront()
 
   return (
     <Container>
@@ -67,9 +67,11 @@ export default function Template({ data }) {
           <Imagem src={apiItem.img} alt={apiItem.title} />
           <div className="titleRight">
             <TitleText>{frontmatter.title}</TitleText>
-            <CreatedBy onClick={() => navigate(`/author/denner-azevedo`)}>
+            <CreatedBy
+              onClick={() => navigate(`/author/${apiItem.createdLink}`)}
+            >
               <span>
-                    por <b>{apiItem.createdBy}</b>
+                por <b>{apiItem.createdBy}</b>
               </span>
             </CreatedBy>
             <Date>

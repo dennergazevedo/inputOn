@@ -52,5 +52,14 @@
     "url": "/frontend/react-hooks-props-state",
     "destaque": false,
     "img": "https://i.imgur.com/mclcMEJ.png"
+  },
+  {
+    "title": "ReactJS - Consumindo API REST com Axios.",
+    "createdBy": "Denner Azevedo",
+    "createdLink": "denner-azevedo",
+    "menu": "FRONTEND",
+    "url": "/frontend/how-to-consume-api-from-axios",
+    "destaque": false,
+    "img": "https://i.imgur.com/51TdMvu.png"
   }
 ]

@@ -33,7 +33,6 @@ import {
 export default function Home() {
 
   const [limit, setLimit] = useState(9);
-  const destaques = api.filter( item => item.destaque );
 
   return (
     <Container>
@@ -44,13 +43,7 @@ export default function Home() {
       </Helmet>
       <GlobalStyle />
       <Navbar />
-          {
-            [...destaques.keys()].map(id => (
-              <div>
-                <Destaque key={id} id={id} />
-              </div>
-            ))
-          }
+        <Destaque />
         <ListCards>
           {
             [...api.keys()].map(id => (

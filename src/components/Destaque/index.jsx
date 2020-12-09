@@ -21,22 +21,35 @@ import api from '../../menu/api.json';
 import { navigate } from 'gatsby';
 
 export default function Destaque(props) {
+    let apiItem;
+
+    function handleSetDestaque() {
+        for (let i = 0; i < api.length; i++) {
+          if (api[i].destaque) {
+            apiItem = api[i];
+            break;
+          }
+        }
+      }
+
+    handleSetDestaque();
+    
     return (
         <Container>
-            <Image src={api[props.id].img} alt="Imagem" onClick={() => navigate(`${api[props.id].url}`)}/>
+            <Image src={apiItem.img} alt="Imagem" onClick={() => navigate(`${apiItem.url}`)}/>
             <Body>
                 <DestIcon>
                     <FaStar className="icon" />
                     <span>DESTAQUE</span>
                 </DestIcon>
-                <Title onClick={() => navigate(`${api[props.id].url}`)}>
-                    {api[props.id].title}
+                <Title onClick={() => navigate(`${apiItem.url}`)}>
+                    {apiItem.title}
                 </Title>
-                <CreatedBy onClick={() => navigate(`author/${api[props.id].createdLink}`)}>
-                    <span>por <b>{api[props.id].createdBy}</b></span>
+                <CreatedBy onClick={() => navigate(`author/${apiItem.createdLink}`)}>
+                    <span>por <b>{apiItem.createdBy}</b></span>
                 </CreatedBy>
-                <MenuIcon onClick={() => navigate(`${(api[props.id].menu).toLowerCase()}`)}>
-                    <span>{api[props.id].menu}</span>
+                <MenuIcon onClick={() => navigate(`${(apiItem.menu).toLowerCase()}`)}>
+                    <span>{apiItem.menu}</span>
                 </MenuIcon>
             </Body>
         </Container>

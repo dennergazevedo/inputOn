@@ -32,31 +32,37 @@ module.exports = {
     },
     {
       resolve: `gatsby-plugin-styled-components`,
-      options:{
+      options: {
         displayName: process.env.NODE_ENV !== 'production',
-      }
+      },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "G-60Q6W13W6J",
+        trackingId: 'G-60Q6W13W6J',
       },
     },
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingIds: [
-          "G-60Q6W13W6J"
-        ],
+        trackingIds: ['G-60Q6W13W6J'],
       },
     },
     {
       resolve: `gatsby-plugin-page-creator`,
       options: {
         path: `${__dirname}/src/pages`,
-        ignore: [`**/styles.js`]
+        ignore: [`**/styles.js`],
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-pages`,
+        path: `${__dirname}/src/markdown-pages`,
+      },
+    },
+    `gatsby-transformer-remark`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-offline`,
   ],

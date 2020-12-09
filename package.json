@@ -29,6 +29,9 @@
     "gatsby-plugin-react-helmet": "^3.5.0",
     "gatsby-plugin-sitemap": "^2.7.0",
     "gatsby-plugin-styled-components": "^3.5.0",
+    "gatsby-source-filesystem": "^2.7.0",
+    "gatsby-transformer-remark": "^2.12.0",
+    "polished": "^4.0.5",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
@@ -41,7 +44,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+    "url": "https://github.com/dennergazevedo/inputOn"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"

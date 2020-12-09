@@ -61,5 +61,14 @@
     "url": "/frontend/how-to-consume-api-from-axios",
     "destaque": false,
     "img": "https://i.imgur.com/51TdMvu.png"
+  },
+  {
+    "title": "InputOn - Template CRA versão TypeScript",
+    "createdBy": "Pedro Vasconcellos",
+    "createdLink": "pedro-vasconcellos",
+    "menu": "FRONTEND",
+    "url": "/frontend/template-cra-pdr-typescript",
+    "destaque": false,
+    "img": "https://i.imgur.com/JGPqGRR.png"
   }
 ]

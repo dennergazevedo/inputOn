@@ -324,7 +324,8 @@ export const Text = styled.div`
   pre {
     background: ${props => props.theme.color};
     border-radius: 4px;
-    width: 100%;
+    width: 70vw;
+    white-space: normal;
 
     color: ${props => props.theme.background};
 

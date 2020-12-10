@@ -116,13 +116,13 @@ const  persistConfig  = {
 ```
 Seguindo no código temos:
 ```
-const  persistedReducer  =  persistReducer(persistConfig, rootReducer);
+const  persistedReducer  =  persistReducer (persistConfig, rootReducer);
 ```
 A função **persistReducer** recebem dois parâmetros, o de configuração e o **combineReducers** do nosso **rootReducer** que como mencionado anteriormente, permite usar mais de um reducer. Essa função retorna um **REDUCER ENHANCER**, que usaremos para criar nossa Store.
 
 Criando a Store:
 ```
-const  store  =  createStore(persistedReducer, middlewares);
+const  store  =  createStore (persistedReducer, middlewares);
 ```
 Chegou a hora de entender o que tem dentro do arquivo que importamos para o **createStore**. 
 
@@ -131,7 +131,7 @@ Abrindo o arquivo **createStore.js** dentro da pasta **store** você irá ver o 
 ```
 import { createStore, applyMiddleware } from  'redux';
 export  default (reducers, middlewares) => {
-	const  enhancer  =  applyMiddleware(...middlewares);
+	const  enhancer  =  applyMiddleware (...middlewares);
 	return  createStore(reducers, enhancer);
 };
 ```
@@ -144,13 +144,13 @@ Após isso usamos a função **applyMiddleware** para retornar um **ENHANCER** c
 De volta ao **store/index.js** notamos que a chamada dele passou exatamente os parâmetros mencionados acima:
 
 ```
-const  store  =  createStore(persistedReducer, middlewares);
+const  store  =  createStore (persistedReducer, middlewares);
 ```
 
 Agora vamos mostrar qual **store** o **PERSIST** deve armazenar no local storage e executar nosso **rootSaga** com a "intância" do **sagaMiddleware** que criamos:
 ```
 const  persistor  =  persistStore(store); 
-sagaMiddleware.run(rootSaga);
+sagaMiddleware.run (rootSaga);
 ```
 
 Por fim exportamos um objeto contendo dois itens, nosso **store** e o **persistor**.
@@ -166,7 +166,7 @@ Agora para dar sequência nós precisamos configurar nossos **PROVIDERS** que se
 Vamos acessar o arquivo **App.js** na raiz do projeto e fazer os seguintes imports logo após os *ROUTES*, se você baixou o repositório acima já está configurado:
 
 ```
-import { PersistGate } from  'redux-persist/integration/react';
+import { PersistGate } from  'redux-persist /integration/react';
 import { Provider } from  'react-redux';
 import { store, persistor } from  './store';
 ```
@@ -196,7 +196,7 @@ Actions nada mais são do que funções que retornam um **TYPE ÚNICO NA APLICA�
 ```
 export function addPostRequest(title){
 	return{
-		type:'@post/ADD_POST_REQUEST',
+		type: '@post/ ADD_POST_REQUEST',
 		payload:{ title },
 	};
 }
@@ -214,8 +214,8 @@ Se eu ainda não te convenci a baixar o repositório, anda logo.
 
 Vamos ignorar por enquanto as importações das actions e vamos direto para o fim do arquivo onde temos um **export default** com um array, contendo o seguinte código:
 ```
-takeLatest('@post/ADD_POST_REQUEST', adicionarNewPostTitle),
-takeLatest('@post/CLEAN_POST_REQUEST', cleanPost),
+takeLatest('@post /ADD_POST_REQUEST', adicionarNewPostTitle),
+takeLatest('@post /CLEAN_POST_REQUEST', cleanPost),
 ```
 O **takeLatest** é responsável por executar a função do segundo parâmetro, quando o **type** é igual ao da action disparada.
 
@@ -228,7 +228,7 @@ O **state** é o estado atual ou inicial do Redux e o **draft** é a "instância
 
 Usamos o **SWITCH** para percorrer as actions e verificar o **type** de cada uma delas, em caso de **true** em algum dos **case**, é executado o código dentro do bloco do mesmo, usamos esse bloco para editar o state, como o exemplo abaixo:
 ```
-case  "@post/ADD_POST_SUCCESS":{
+case  "@post/ ADD_POST_SUCCESS":{
 	draft.data  = [...state.data, action.payload.title];
 	break;
 }
@@ -253,11 +253,11 @@ Onde buscamos o estado **data** do meu módulo **post**.
 
 **useDispatch** é usado disparar uma action, mas antes precisamos importar elas:
 ```
-import { addPostRequest, cleanPostRequest } from  '../../store/modules/post/actions';
+import { addPostRequest, cleanPostRequest } from  '../../store/ modules/post/actions';
 ```
 Quando for necessário, disparamos uma action assim:
 ```
-dispatch(addPostRequest(postAdd));
+dispatch (addPostRequest (postAdd));
 ```
 Perceba que não passamos para o dispatch o **type** e sim o nome da função referente à action desejada.
 
@@ -285,7 +285,7 @@ Para usar o Redux o primeiro passo é disparar uma **ACTION**, considerando que 
 
 A Action é disparada dentro da função **handleAddPost** pelo dispatch:
 ```
-dispatch(addPostRequest(postAdd));
+dispatch (addPostRequest (postAdd));
 ```
 
 No arquivo **store/modules/post/actions.js** temos a função **addPostRequest** que possui o **type** *@post/ADD_POST_REQUEST* e recebe o payload { title }.

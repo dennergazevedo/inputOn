@@ -5,8 +5,16 @@ import {
   CarouselContainer,
   CarouselSlot,
   PREV,
-  NEXT
+  NEXT,
+  ButtonLeft,
+  ButtonRight
 } from "./styles";
+
+// ICONS
+import {
+  IoIosArrowBack,
+  IoIosArrowForward
+} from 'react-icons/io';
 
 const getOrder = ({ index, pos, numItems }) => {
   return index - pos < 0 ? numItems - Math.abs(index - pos) : index - pos;
@@ -41,6 +49,12 @@ const Carousel = props => {
             </CarouselSlot>
           ))}
         </CarouselContainer>
+        <ButtonLeft>
+          <IoIosArrowBack className="icon" onClick={() => slide(PREV)} float="left"/>
+        </ButtonLeft>
+        <ButtonRight>
+          <IoIosArrowForward className="icon" onClick={() => slide(NEXT)} float="right"/>
+        </ButtonRight>
       </Wrapper>
     </div>
   );

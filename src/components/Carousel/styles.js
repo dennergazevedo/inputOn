@@ -21,10 +21,48 @@ export const CarouselContainer = styled.div`
 `;
 
 export const Wrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   overflow: hidden;
   margin-bottom: 30px;
 `;
+
+export const ButtonLeft = styled.div`
+  display: flex;
+  position: absolute;
+  left: 20px;
+  font-size: 50px;
+  font-weight: 600;
+
+  .icon{
+    cursor: pointer;
+    color: #3332;
+
+    &:hover{
+      color: #3335;
+    }
+  }
+`;
+
+export const ButtonRight = styled.div`
+  display: flex;
+  position: absolute;
+  right: 20px;
+  font-size: 50px;
+  font-weight: 600;
+
+  .icon{
+    cursor: pointer;
+    color: #3332;
+
+    &:hover{
+      color: #3335;
+    }
+  }
+`;
+
 
 export const CarouselSlot = styled.div`
   flex: 1 0 100%;

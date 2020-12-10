@@ -99,7 +99,7 @@ const float = keyframes`
 
 export const Logo = styled.div`
   flex-direction: column;
-  margin-top: 20px;
+  margin-top: 50px;
   margin-bottom: 20px;
   margin-left: 5px;
 `

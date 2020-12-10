@@ -1,5 +1,14 @@
 [
   {
+    "title": "React Hooks - Redux + Redux-Saga + Persist",
+    "createdBy": "Denner Azevedo",
+    "createdLink": "denner-azevedo",
+    "menu": "FRONTEND",
+    "url": "/frontend/reacthooks-redux",
+    "destaque": false,
+    "img": "https://i.imgur.com/X95an4h.png"
+  },
+  {
     "title": "InputOn - Template CRA versão TypeScript",
     "createdBy": "Pedro Vasconcellos",
     "createdLink": "pedro-vasconcellos",

@@ -70,7 +70,7 @@ export default function Navbar() {
                             <button onClick={() => navigate('/')}>HOME</button>
                             <button onClick={() => navigate('/frontend')}>FRONTEND</button>
                             <button onClick={() => navigate('/backend')}>BACKEND</button>
-                            <button onClick={() => navigate('/mobile')}>MOBILE</button>
+                            <button onClick={() => navigate('/tech')}>TECH</button>
                         </Menu>
                         :
                         <Menu menuOpened={menuOpen}>
@@ -95,7 +95,7 @@ export default function Navbar() {
                                     <button onClick={() => navigate('/')}>HOME</button>
                                     <button onClick={() => navigate('/frontend')}>FRONTEND</button>
                                     <button onClick={() => navigate('/backend')}>BACKEND</button>
-                                    <button onClick={() => navigate('/mobile')}>MOBILE</button>
+                                    <button onClick={() => navigate('/tech')}>TECH</button>
                                 </MenuBar>
                             }
                         </Menu>

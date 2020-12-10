@@ -26,7 +26,7 @@ export default function Footer() {
                     <span onClick={() => navigate('/')}>HOME</span>
                     <span onClick={() => navigate('/frontend')}>FRONTEND</span>
                     <span onClick={() => navigate('/backend')}>BACKEND</span>
-                    <span onClick={() => navigate('/mobile')}>MOBILE</span>
+                    <span onClick={() => navigate('/tech')}>TECH</span>
                 </div>
                 <div>
                     <span className="social"><FaFacebookSquare /></span>

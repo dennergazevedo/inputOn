@@ -22,8 +22,8 @@ import {
 
 // ICONS
 import {
-    FaMobileAlt,
-} from 'react-icons/fa';
+    GiTechnoHeart,
+} from 'react-icons/gi';
 import {
     BsArrowDownShort
 } from 'react-icons/bs';
@@ -31,7 +31,7 @@ import {
 // API
 import api from '../../menu/api.json';
 
-export default function Mobile() {
+export default function TECH() {
 
     const [limit, setLimit] = useState(9);
 
@@ -39,7 +39,7 @@ export default function Mobile() {
 
     function handleApiFront(){
         for(let i=0; i < api.length; i++){
-            if(api[i].menu === 'MOBILE'){
+            if(api[i].menu === 'TECH'){
                 apiFront.push(api[i]);
             }
         }
@@ -51,18 +51,18 @@ export default function Mobile() {
         <Container>
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>InputOn - Mobile</title>
+                <title>InputOn - Tech</title>
                 <link rel="canonical" href="https://www.inputon.com.br/mobile" />
             </Helmet>
                     <GlobalStyle />
             <Navbar />
             <Body>
                 <Title>
-                    <FaMobileAlt className="icon"/>
-                    <span>MOBILE</span>
+                    <GiTechnoHeart className="icon"/>
+                    <span>TECH</span>
                 </Title>
                 <Subtitle>
-                    <span>Posts sobre tecnologias de Mobile</span>
+                    <span>Posts sobre tecnologias</span>
                 </Subtitle>
             </Body>
             <ListCards>

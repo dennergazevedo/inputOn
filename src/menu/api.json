@@ -14,7 +14,7 @@
     "createdLink": "pedro-vasconcellos",
     "menu": "FRONTEND",
     "url": "/frontend/template-cra-pdr-typescript",
-    "destaque": false,
+    "destaque": true,
     "img": "https://i.imgur.com/TTPmvCA.png"
   },
   {
@@ -41,7 +41,7 @@
     "createdLink": "denner-azevedo",
     "menu": "FRONTEND",
     "url": "/frontend/template-cra-dnr",
-    "destaque": false,
+    "destaque": true,
     "img": "https://i.imgur.com/JGPqGRR.png"
   },
   {

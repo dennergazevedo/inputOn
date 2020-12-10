@@ -36,6 +36,7 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
     "react-icons": "^3.11.0",
+    "react-swipeable": "^6.0.1",
     "react-switch": "^5.0.1",
     "styled-components": "^5.2.1"
   },

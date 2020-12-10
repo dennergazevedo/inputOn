@@ -16,18 +16,20 @@ import {
     FaStar
 } from 'react-icons/fa';
 
+// COMPONENTS
+import Carousel from '../Carousel';
+
 // API
 import api from '../../menu/api.json';
 import { navigate } from 'gatsby';
 
 export default function Destaque(props) {
-    let apiItem;
+    let apiItem = [];
 
     function handleSetDestaque() {
         for (let i = 0; i < api.length; i++) {
           if (api[i].destaque) {
-            apiItem = api[i];
-            break;
+            apiItem.push(api[i]);
           }
         }
       }
@@ -35,23 +37,30 @@ export default function Destaque(props) {
     handleSetDestaque();
     
     return (
-        <Container>
-            <Image src={apiItem.img} alt="Imagem" onClick={() => navigate(`${apiItem.url}`)}/>
-            <Body>
-                <DestIcon>
-                    <FaStar className="icon" />
-                    <span>DESTAQUE</span>
-                </DestIcon>
-                <Title onClick={() => navigate(`${apiItem.url}`)}>
-                    {apiItem.title}
-                </Title>
-                <CreatedBy onClick={() => navigate(`author/${apiItem.createdLink}`)}>
-                    <span>por <b>{apiItem.createdBy}</b></span>
-                </CreatedBy>
-                <MenuIcon onClick={() => navigate(`${(apiItem.menu).toLowerCase()}`)}>
-                    <span>{apiItem.menu}</span>
-                </MenuIcon>
-            </Body>
-        </Container>
+        <Carousel title="Carousel">
+            {
+                apiItem &&
+                [...apiItem.keys()].map(index => (
+                    <Container>
+                        <Image src={apiItem[index].img} alt="Imagem" onClick={() => navigate(`${apiItem[index].url}`)}/>
+                        <Body>
+                            <DestIcon>
+                                <FaStar className="icon" />
+                                <span>DESTAQUE</span>
+                            </DestIcon>
+                            <Title onClick={() => navigate(`${apiItem[index].url}`)}>
+                                {apiItem[index].title}
+                            </Title>
+                            <CreatedBy onClick={() => navigate(`author/${apiItem[index].createdLink}`)}>
+                                <span>por <b>{apiItem[index].createdBy}</b></span>
+                            </CreatedBy>
+                            <MenuIcon onClick={() => navigate(`${(apiItem[index].menu).toLowerCase()}`)}>
+                                <span>{apiItem[index].menu}</span>
+                            </MenuIcon>
+                        </Body>
+                    </Container>
+                ))
+            }
+        </Carousel>
     )
 }

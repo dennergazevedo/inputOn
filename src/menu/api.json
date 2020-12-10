@@ -5,7 +5,7 @@
     "createdLink": "denner-azevedo",
     "menu": "FRONTEND",
     "url": "/frontend/reacthooks-redux",
-    "destaque": false,
+    "destaque": true,
     "img": "https://i.imgur.com/X95an4h.png"
   },
   {
@@ -41,7 +41,7 @@
     "createdLink": "denner-azevedo",
     "menu": "FRONTEND",
     "url": "/frontend/template-cra-dnr",
-    "destaque": true,
+    "destaque": false,
     "img": "https://i.imgur.com/JGPqGRR.png"
   },
   {

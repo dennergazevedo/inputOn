@@ -1,4 +1,5 @@
-import React from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useEffect } from "react";
 import { useSwipeable } from "react-swipeable";
 import {
   Wrapper,
@@ -24,18 +25,32 @@ const initialState = { pos: 0, sliding: false, dir: NEXT };
 const Carousel = props => {
   const [state, dispatch] = React.useReducer(reducer, initialState);
   const numItems = React.Children.count(props.children);
+
   const slide = dir => {
     dispatch({ type: dir, numItems });
     setTimeout(() => {
       dispatch({ type: "stopSliding" });
     }, 50);
   };
+
   const handlers = useSwipeable({
     onSwipedLeft: () => slide(NEXT),
     onSwipedRight: () => slide(PREV),
     preventDefaultTouchmoveEvent: true,
     trackMouse: true
   });
+
+  function handleLoop(){
+    slide(NEXT);
+    setTimeout(function(){
+      handleLoop();
+    }, 7000);
+  }
+
+  useEffect(()=>{
+    handleLoop();
+  }, []);
+
   return (
     <div {...handlers} style={{cursor:'grab'}}>
       <Wrapper>

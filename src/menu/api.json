@@ -1,5 +1,14 @@
 [
   {
+    "title": "TypeScript - Uma Breve Explicação",
+    "createdBy": "Pedro Vasconcellos",
+    "createdLink": "pedro-vasconcellos",
+    "menu": "BACKEND",
+    "url": "/backend/sobre-typescript",
+    "destaque": false,
+    "img": "https://i.imgur.com/wsViFXw.jpg"
+  },
+  {
     "title": "InputOn - VSCode Dark Theme",
     "createdBy": "Denner Azevedo",
     "createdLink": "denner-azevedo",

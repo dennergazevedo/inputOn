@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { navigate } from 'gatsby';
 
 // STYLED COMPONENTS
@@ -9,23 +9,46 @@ import {
     Body,
     Title,
     CreatedBy,
-    MenuIcon
+    MenuIcon,
+    ListMenu
 } from './styles';
 
 export default function Card(props) {
+    const [api, setApi] = useState(props.api);
+
+    useEffect(()=>{
+        setApi(props.api)
+    }, [props.api])
+
     return (
-        <Container onClick={() => navigate(`${props.api.url}`)}>
-            <Image src={props.api.img} alt="Imagem" />
+        <Container onClick={() => navigate(`${api.url}`)}>
+            <Image src={api.img} alt="Imagem" />
             <Title>
-                {props.api.title}
+                {api.title}
             </Title>
             <Body>
-                <CreatedBy onClick={() => navigate(`author/${props.api.createdLink}`)}>
-                    <span>por <b>{props.api.createdBy}</b></span>
+                <CreatedBy onClick={() => navigate(`author/${api.createdLink}`)}>
+                    <span>por <b>{api.createdBy}</b></span>
                 </CreatedBy>
-                <MenuIcon>
-                    <span>{props.api.menu}</span>
-                </MenuIcon>
+                <ListMenu>
+                    {
+                        Array.isArray(api.menu)?
+                        <>
+                            {
+                                [...api.menu].map(id => (
+                                    <MenuIcon key={id}>
+                                        <span>{id}</span>
+                                    </MenuIcon>
+                                ))
+                            }
+                        </>
+                        :
+                        <MenuIcon>
+                            <span>{api.menu}</span>
+                        </MenuIcon>
+                    }
+                </ListMenu>
+                
             </Body>
         </Container>
     )

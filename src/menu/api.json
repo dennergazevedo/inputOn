@@ -3,7 +3,7 @@
     "title": "TypeScript - Uma Breve Explicação",
     "createdBy": "Pedro Vasconcellos",
     "createdLink": "pedro-vasconcellos",
-    "menu": "BACKEND",
+    "menu": ["BACKEND", "FRONTEND"],
     "url": "/backend/sobre-typescript",
     "destaque": false,
     "img": "https://i.imgur.com/wsViFXw.jpg"

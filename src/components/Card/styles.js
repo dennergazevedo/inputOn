@@ -32,6 +32,14 @@ export const Image = styled.img`
     min-width: 300px;
 `;
 
+export const ListMenu = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%
+`;
+
 export const Body = styled.div`
     display: flex;
     flex-direction: column;
@@ -79,6 +87,7 @@ export const MenuIcon = styled.div`
     padding-right: 10px;
     background-color: ${props => props.theme.color};
     margin-top: 20px;
+    margin-right: 10px;
     
 
     span{

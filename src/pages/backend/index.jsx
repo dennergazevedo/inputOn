@@ -39,9 +39,8 @@ export default function Backend() {
 
     function handleApiBackend(){
         for(let i=0; i < api.length; i++){
-            if(api[i].menu === 'BACKEND'){
+            if(api[i].menu.indexOf("BACKEND", 0) !== -1){
                 apiBack.push(api[i]);
-                console.log(api[i]);
             }
         }
     }

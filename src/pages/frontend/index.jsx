@@ -39,7 +39,7 @@ export default function Frontend() {
 
     function handleApiFront(){
         for(let i=0; i < api.length; i++){
-            if(api[i].menu === 'FRONTEND'){
+            if(api[i].menu.indexOf("FRONTEND", 0) !== -1){
                 apiFront.push(api[i]);
             }
         }

@@ -39,7 +39,7 @@ export default function TECH() {
 
     function handleapiTech(){
         for(let i=0; i < api.length; i++){
-            if(api[i].menu === 'TECH'){
+            if(api[i].menu.indexOf("TECH", 0) !== -1){
                 apiTech.push(api[i]);
             }
         }

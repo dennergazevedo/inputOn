@@ -28,6 +28,7 @@ import {
   Logo,
   BodyLogo,
   Logomarca,
+  ListMenu
 } from './styles.js'
 
 // ICONS
@@ -78,9 +79,24 @@ export default function Template({ data }) {
             <Date>
               <FaBookmark className="icon" /> POSTADO EM {frontmatter.date}
             </Date>
-            <MenuIcon>
-              <span>FRONTEND</span>
-            </MenuIcon>
+            <ListMenu>
+                  {
+                      Array.isArray(apiItem.menu)?
+                      <>
+                          {
+                              [...apiItem.menu].map(id => (
+                                  <MenuIcon key={id}>
+                                      <span>{id}</span>
+                                  </MenuIcon>
+                              ))
+                          }
+                      </>
+                      :
+                      <MenuIcon>
+                          <span>{apiItem.menu}</span>
+                      </MenuIcon>
+                  }
+              </ListMenu>
           </div>
         </Title>
         <Text

@@ -207,6 +207,7 @@ export const MenuIcon = styled.div`
   background-color: ${props => props.theme.color};
   margin-top: 20px;
   cursor: default;
+  margin-right: 10px;
 
   &:hover {
     background-color: ${props => props.theme.primary};
@@ -218,6 +219,14 @@ export const MenuIcon = styled.div`
     color: ${props => props.theme.background};
     transition: 0.5s all;
   }
+`
+
+export const ListMenu = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%
 `
 
 export const Text = styled.div`

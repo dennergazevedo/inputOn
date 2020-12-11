@@ -20,7 +20,7 @@ interface IThemeContext{
 const ThemeContext = createContext<IThemeContext>({setThemeString: '', themeString: ''});
 
 const ThemeProvider: React.FC<any> = ({ children }) => {
-  const [themeString, setThemeString] = useState(null);
+  const [themeString, setThemeString] = useState('');
   const themeObject = themeString === "dark" ? darkTheme : lightTheme;
 
   useEffect(()=>{
@@ -28,16 +28,11 @@ const ThemeProvider: React.FC<any> = ({ children }) => {
   },[])
 
   return (
-    <>
-      {
-        themeString &&
-        <ThemeContext.Provider value={{ themeString, setThemeString }}>
-          <BaseThemeProvider theme={themeObject}>
-            {children}
-          </BaseThemeProvider>
-        </ThemeContext.Provider>
-      }
-    </>
+      <ThemeContext.Provider value={{ themeString, setThemeString }}>
+        <BaseThemeProvider theme={themeObject}>
+          {children}
+        </BaseThemeProvider>
+      </ThemeContext.Provider>
   );
 };
 

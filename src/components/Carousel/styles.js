@@ -27,6 +27,7 @@ export const Wrapper = styled.div`
   width: 100%;
   overflow: hidden;
   margin-bottom: 30px;
+  z-index: 10;
 `;
 
 export const ButtonLeft = styled.div`

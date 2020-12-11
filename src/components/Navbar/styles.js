@@ -11,6 +11,7 @@ export const Main = styled.div`
     height: 80px;
     background-color: transparent;
     margin-bottom: 50px;
+    z-index: 30;
 
     @media only screen and (max-width: 800px){
         width: 90%;

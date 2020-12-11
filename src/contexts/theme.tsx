@@ -2,12 +2,10 @@ import React, {
   useState,
   useContext,
   createContext,
-  useEffect
+  useEffect,
 } from "react";
 
 import { ThemeProvider as BaseThemeProvider } from "styled-components";
-
-import { window } from 'browser-monads';
 
 
 import { lightTheme, darkTheme } from "../styles/themes";
@@ -20,19 +18,23 @@ interface IThemeContext{
 const ThemeContext = createContext<IThemeContext>({setThemeString: '', themeString: ''});
 
 const ThemeProvider: React.FC<any> = ({ children }) => {
-  const [themeString, setThemeString] = useState('');
+  const [themeString, setThemeString] = useState(localStorage.getItem('@inputon:theme'));
   const themeObject = themeString === "dark" ? darkTheme : lightTheme;
 
   useEffect(()=>{
-    setThemeString(JSON.parse(window.localStorage.getItem('@inputon:theme') || 'light'))
-  },[])
+    function loadStorageData(){
+      const storageTheme = localStorage.getItem('@inputon:theme');
+      if(storageTheme) setThemeString(storageTheme);
+    }
+    loadStorageData();
+  }, [])
 
   return (
-      <ThemeContext.Provider value={{ themeString, setThemeString }}>
-        <BaseThemeProvider theme={themeObject}>
-          {children}
-        </BaseThemeProvider>
-      </ThemeContext.Provider>
+    <ThemeContext.Provider value={{ themeString, setThemeString }}>
+      <BaseThemeProvider theme={themeObject}>
+        {children}
+      </BaseThemeProvider>
+    </ThemeContext.Provider>
   );
 };
 
@@ -40,17 +42,17 @@ function useTheme() {
   const context = useContext(ThemeContext);
 
   if (!context)
-    throw new Error("ThemeProvider não encontrado.");
+    throw new Error("useTheme must be used within a ThemeProvider");
 
   const { themeString, setThemeString } = context;
 
   function toggleTheme (){
     if (themeString === "light"){
       setThemeString("dark");
-      window.localStorage.setItem('@inputon:theme', JSON.stringify('dark'))
+      localStorage.setItem('@inputon:theme', JSON.stringify('dark'))
     } else if (themeString === "dark"){
       setThemeString("light");
-      window.localStorage.setItem('@inputon:theme', JSON.stringify('light'))
+      localStorage.setItem('@inputon:theme', JSON.stringify('light'))
     } 
   }
   

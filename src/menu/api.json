@@ -1,5 +1,14 @@
 [
   {
+    "title": "InputOn - VSCode Dark Theme",
+    "createdBy": "Denner Azevedo",
+    "createdLink": "denner-azevedo",
+    "menu": "TECH",
+    "url": "/tech/vscode-dark-theme",
+    "destaque": false,
+    "img": "https://i.imgur.com/UEHnoWn.png"
+  },
+  {
     "title": "React Hooks - Redux + Redux-Saga + Persist",
     "createdBy": "Denner Azevedo",
     "createdLink": "denner-azevedo",

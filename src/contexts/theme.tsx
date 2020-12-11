@@ -5,6 +5,8 @@ import React, {
   useEffect,
 } from "react";
 
+import { window } from 'browser-monads';
+
 import { ThemeProvider as BaseThemeProvider } from "styled-components";
 
 
@@ -18,12 +20,12 @@ interface IThemeContext{
 const ThemeContext = createContext<IThemeContext>({setThemeString: '', themeString: ''});
 
 const ThemeProvider: React.FC<any> = ({ children }) => {
-  const [themeString, setThemeString] = useState(localStorage.getItem('@inputon:theme'));
+  const [themeString, setThemeString] = useState(window.localStorage.getItem('@inputon:theme'));
   const themeObject = themeString === "dark" ? darkTheme : lightTheme;
 
   useEffect(()=>{
     function loadStorageData(){
-      const storageTheme = localStorage.getItem('@inputon:theme');
+      const storageTheme = window.localStorage.getItem('@inputon:theme');
       if(storageTheme) setThemeString(storageTheme);
     }
     loadStorageData();

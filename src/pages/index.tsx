@@ -32,7 +32,7 @@ import {
 
  const Home: React.FC = () => {
 
-  const [limit, setLimit] = useState<number>(9);
+  const [limit, setLimit] = useState<number>(8);
 
   return (
     <Container>
@@ -47,14 +47,9 @@ import {
         <ListCards>
           {
             [...api.keys()].map(id => (
-                <>
-                  {
-                    !api[id].destaque &&
-                    <div hidden={id > limit}>
-                      <Card api={api[id]}/>
-                    </div>
-                  }
-                </>
+              <div hidden={id > limit}>
+                <Card api={api[id]}/>
+              </div>
             ))
           }
         </ListCards>

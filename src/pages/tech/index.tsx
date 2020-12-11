@@ -33,7 +33,7 @@ import api, { IItem } from '../../menu/api';
 
 const Tech: React.FC = () => {
 
-    const [limit, setLimit] = useState<number>(9);
+    const [limit, setLimit] = useState<number>(8);
 
     let apiTech: Array<IItem> = [];
 

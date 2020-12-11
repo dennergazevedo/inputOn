@@ -54,7 +54,7 @@ export const Top = styled.div`
 
             &:hover{
                 transition: 0.5s all;
-                color: ${props => props.theme.hoverColor};
+                color: ${props => props.theme.primary};
             }
         }
     }
@@ -82,7 +82,7 @@ export const Bottom = styled.div`
         color: ${props => props.theme.color};
 
         &:hover{
-            color: ${props => props.theme.hoverColor}
+            color: ${props => props.theme.primary}
         }
     }
 
@@ -94,7 +94,7 @@ export const Bottom = styled.div`
         color: ${props => props.theme.color};
 
         &:hover{
-            color: ${props => props.theme.hoverColor}
+            color: ${props => props.theme.primary}
         }
     }
 `;

@@ -37,10 +37,10 @@ export const ButtonLeft = styled.div`
 
   .icon{
     cursor: pointer;
-    color: #3332;
+    color: ${props => props.theme.color}2;
 
     &:hover{
-      color: #3335;
+      color: ${props => props.theme.color}5;
     }
   }
 `;
@@ -54,10 +54,10 @@ export const ButtonRight = styled.div`
 
   .icon{
     cursor: pointer;
-    color: #3332;
+    color: ${props => props.theme.color}2;
 
     &:hover{
-      color: #3335;
+      color: ${props => props.theme.color}5;
     }
   }
 `;

@@ -33,7 +33,7 @@ import api, { IItem } from '../../menu/api';
 
 const Backend: React.FC = () => {
 
-    const [limit, setLimit] = useState<number>(9);
+    const [limit, setLimit] = useState<number>(8);
 
     let apiBack: Array<IItem> = [];
 

@@ -33,7 +33,7 @@ import { Helmet } from "react-helmet";
 
 const Frontend: React.FC = () => {
 
-    const [limit, setLimit] = useState<number>(9);
+    const [limit, setLimit] = useState<number>(8);
 
     let apiFront: Array<IItem> = [];
 

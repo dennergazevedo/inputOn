@@ -20,12 +20,12 @@ interface IThemeContext{
 const ThemeContext = createContext<IThemeContext>({setThemeString: '', themeString: ''});
 
 const ThemeProvider: React.FC<any> = ({ children }) => {
-  const [themeString, setThemeString] = useState('');
+  const [themeString, setThemeString] = useState(window.localStorage.getItem('@inputon:theme'));
   const themeObject = themeString === "dark" ? darkTheme : lightTheme;
 
   useEffect(()=>{
     function loadStorageData(){
-      const storageTheme = JSON.parse(window.localStorage.getItem('@inputon:theme'));
+      const storageTheme = window.localStorage.getItem('@inputon:theme');
       if(storageTheme) setThemeString(storageTheme);
     }
     loadStorageData();
@@ -51,10 +51,10 @@ function useTheme() {
   function toggleTheme (){
     if (themeString === "light"){
       setThemeString("dark");
-      localStorage.setItem('@inputon:theme', JSON.stringify('dark'))
+      window.localStorage.setItem('@inputon:theme', JSON.stringify('dark'))
     } else if (themeString === "dark"){
       setThemeString("light");
-      localStorage.setItem('@inputon:theme', JSON.stringify('light'))
+      window.localStorage.setItem('@inputon:theme', JSON.stringify('light'))
     } 
   }
   

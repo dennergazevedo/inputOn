@@ -21,10 +21,10 @@ const ThemeContext = createContext<IThemeContext>({setThemeString: '', themeStri
 
 const ThemeProvider: React.FC<any> = ({ children }) => {
   const [themeString, setThemeString] = useState('');
-  const themeObject = window.localStorage.getItem('@inputon:theme') === "dark" ? darkTheme : lightTheme;
+  const themeObject = themeString === "dark" ? darkTheme : lightTheme;
 
   useEffect(()=>{
-    setThemeString(JSON.parse(window.localStorage.getItem('@inputon:theme')))
+    setThemeString(JSON.parse(window.localStorage.getItem('@inputon:theme') || 'light'))
   },[])
 
   return (

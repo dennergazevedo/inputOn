@@ -2,9 +2,12 @@ import React, {
   useState,
   useContext,
   createContext,
+  useEffect
 } from "react";
 
 import { ThemeProvider as BaseThemeProvider } from "styled-components";
+
+import { window } from 'browser-monads';
 
 
 import { lightTheme, darkTheme } from "../styles/themes";
@@ -17,8 +20,12 @@ interface IThemeContext{
 const ThemeContext = createContext<IThemeContext>({setThemeString: '', themeString: ''});
 
 const ThemeProvider: React.FC<any> = ({ children }) => {
-  const [themeString, setThemeString] = useState(JSON.parse(localStorage.getItem('@inputon:theme') || 'light'));
+  const [themeString, setThemeString] = useState('');
   const themeObject = themeString === "dark" ? darkTheme : lightTheme;
+
+  useEffect(()=>{
+    setThemeString(JSON.parse(window.localStorage.getItem('@inputon:theme') || 'light'))
+  },[])
 
   return (
     <>
@@ -45,10 +52,10 @@ function useTheme() {
   function toggleTheme (){
     if (themeString === "light"){
       setThemeString("dark");
-      localStorage.setItem('@inputon:theme', JSON.stringify('dark'))
+      window.localStorage.setItem('@inputon:theme', JSON.stringify('dark'))
     } else if (themeString === "dark"){
       setThemeString("light");
-      localStorage.setItem('@inputon:theme', JSON.stringify('light'))
+      window.localStorage.setItem('@inputon:theme', JSON.stringify('light'))
     } 
   }
   

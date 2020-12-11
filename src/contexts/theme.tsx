@@ -6,7 +6,7 @@ import React, {
 } from "react";
 
 import { ThemeProvider as BaseThemeProvider } from "styled-components";
-import AsyncStorage from '@react-native-community/async-storage';
+
 
 import { lightTheme, darkTheme } from "../styles/themes";
 
@@ -22,8 +22,8 @@ const ThemeProvider: React.FC<any> = ({ children }) => {
   const themeObject = themeString === "dark" ? darkTheme : lightTheme;
 
   useEffect(()=>{
-    async function loadStorageData(){
-      const storageTheme = await AsyncStorage.getItem('@inputon:theme');
+    function loadStorageData(){
+      const storageTheme = localStorage.getItem('@inputon:theme');
       if(storageTheme) setThemeString(JSON.parse(storageTheme));
     }
     loadStorageData();
@@ -46,13 +46,13 @@ function useTheme() {
 
   const { themeString, setThemeString } = context;
 
-  async function toggleTheme (){
+  function toggleTheme (){
     if (themeString === "light"){
       setThemeString("dark");
-      await AsyncStorage.setItem('@inputon:theme', JSON.stringify('dark'))
+      localStorage.setItem('@inputon:theme', JSON.stringify('dark'))
     } else if (themeString === "dark"){
       setThemeString("light");
-      await AsyncStorage.setItem('@inputon:theme', JSON.stringify('light'))
+      localStorage.setItem('@inputon:theme', JSON.stringify('light'))
     } 
   }
   

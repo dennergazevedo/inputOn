@@ -14,7 +14,6 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
-    "@react-native-community/async-storage": "^1.12.1",
     "babel-plugin-styled-components": "^1.12.0",
     "browser-monads": "^1.0.0",
     "framer-motion": "^2.9.4",
@@ -31,6 +30,7 @@
     "gatsby-plugin-styled-components": "^3.5.0",
     "gatsby-source-filesystem": "^2.7.0",
     "gatsby-transformer-remark": "^2.12.0",
+    "local-storage": "^2.0.0",
     "polished": "^4.0.5",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",

@@ -1,12 +1,10 @@
 ---
 slug: '/backend/sobre-typescript'
-date: '2020-12-10'
+date: '2020-12-11'
 title: 'TypeScript - Uma Breve Explicação'
 ---
 
 ## 🤳 Introdução
-
-Saaalve! Hoje vamos trocar uma ideia sobre esse **superset** (que vem sendo considerado como linguagem) maravilhoso, que são 2 mãos na roda ao se desenvolver com _JavaScript_.
 
 Saaalve!  
 Me fala uma coisa: _Superset_ ou _linguagem_? Tem quem brigue... Eu considero uma linguagem 🙅🏽‍♂️.  
@@ -162,5 +160,8 @@ Recomendo fortemente a leitura da [**documentação da linguagem**](https://www.
 
 Um forte abraço, só agradece a atenção! 🙏🏾
 
+<div>
 
 ![Final Gif](https://media.giphy.com/media/MdA16VIoXKKxNE8Stk/giphy.gif)
+
+</div>

@@ -343,7 +343,7 @@ export const Text = styled.div`
     color: ${props => props.theme.color};
   }
 
-  div{
+  div {
     display: flex;
     flex-direction: column;
     width: 100%;

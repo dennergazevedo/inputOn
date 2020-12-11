@@ -30,10 +30,16 @@ const ThemeProvider: React.FC<any> = ({ children }) => {
   return (
     <>
       {
-        themeString &&
+        themeString ?
         <ThemeContext.Provider value={{ themeString, setThemeString }}>
           <BaseThemeProvider theme={themeObject}>
             {children}
+          </BaseThemeProvider>
+        </ThemeContext.Provider>
+        :
+        <ThemeContext.Provider value={{ themeString, setThemeString }}>
+          <BaseThemeProvider theme={themeObject}>
+            <span> </span>
           </BaseThemeProvider>
         </ThemeContext.Provider>
       }

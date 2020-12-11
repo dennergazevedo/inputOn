@@ -19,14 +19,14 @@ interface IThemeContext{
 
 const ThemeContext = createContext<IThemeContext>({setThemeString: '', themeString: ''});
 
-const ThemeProvider: React.FC<any> = ({ children }) => {
-  const [themeString, setThemeString] = useState(window.localStorage.getItem('@inputon:theme'));
+const ThemeProvider = ({ children }) => {
+  const [themeString, setThemeString] = useState("light");
   const themeObject = themeString === "dark" ? darkTheme : lightTheme;
 
   useEffect(()=>{
-    function loadStorageData(){
-      const storageTheme = window.localStorage.getItem('@inputon:theme');
-      if(storageTheme) setThemeString(storageTheme);
+    async function loadStorageData(){
+      const storageTheme = await window.localStorage.getItem('@inputon:theme');
+      if(storageTheme) setThemeString(JSON.parse(storageTheme));
     }
     loadStorageData();
   }, [])

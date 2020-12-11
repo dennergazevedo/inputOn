@@ -10,9 +10,14 @@ import AsyncStorage from '@react-native-community/async-storage';
 
 import { lightTheme, darkTheme } from "../styles/themes";
 
-const ThemeContext = createContext();
+interface IThemeContext{
+  setThemeString: any,
+  themeString: string,
+}
 
-const ThemeProvider = ({ children }) => {
+const ThemeContext = createContext<IThemeContext>({setThemeString: '', themeString: ''});
+
+const ThemeProvider: React.FC<any> = ({ children }) => {
   const [themeString, setThemeString] = useState("light");
   const themeObject = themeString === "dark" ? darkTheme : lightTheme;
 

@@ -22,14 +22,14 @@ const getOrder = ({ index, pos, numItems }) => {
 };
 const initialState = { pos: 0, sliding: false, dir: NEXT };
 
-const Carousel = props => {
+const Carousel: React.FC<any> = (props) => {
   const [state, dispatch] = React.useReducer(reducer, initialState);
   const numItems = React.Children.count(props.children);
 
-  const slide = dir => {
+  const slide: any = (dir) => {
     dispatch({ type: dir, numItems });
     setTimeout(() => {
-      dispatch({ type: "stopSliding" });
+      return dispatch({ type: "stopSliding", numItems });
     }, 50);
   };
 
@@ -65,10 +65,10 @@ const Carousel = props => {
           ))}
         </CarouselContainer>
         <ButtonLeft>
-          <IoIosArrowBack className="icon" onClick={() => slide(PREV)} float="left"/>
+          <IoIosArrowBack className="icon" onClick={() => slide(PREV)}/>
         </ButtonLeft>
         <ButtonRight>
-          <IoIosArrowForward className="icon" onClick={() => slide(NEXT)} float="right"/>
+          <IoIosArrowForward className="icon" onClick={() => slide(NEXT)}/>
         </ButtonRight>
       </Wrapper>
     </div>

@@ -29,7 +29,7 @@ import {
   BodyLogo,
   Logomarca,
   ListMenu
-} from './styles.js'
+} from './styles'
 
 // ICONS
 import { FaBookmark } from 'react-icons/fa'
@@ -37,13 +37,22 @@ import { FaBookmark } from 'react-icons/fa'
 // ASSETS
 import logo from '../assets/img/logo.png'
 
-import api from '../menu/api';
+import api, { IItem } from '../menu/api';
 
-export default function Template({ data }) {
+
+const Template: React.FC<any> = ({ data }) => {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
 
-  let apiItem;
+  let apiItem: IItem = {
+    createdBy:'',
+    createdLink: '',
+    destaque: false,
+    img: '',
+    menu: '',
+    title: '',
+    url: '',
+  };
 
   function handleApiFront() {
     for (let i = 0; i < api.length; i++) {
@@ -116,7 +125,6 @@ export default function Template({ data }) {
         </Logo>
         { apiItem.createdBy === "Denner Azevedo" && <CardDenner /> }
         { apiItem.createdBy === "Pedro Vasconcellos" && <CardPedro /> }
-        { console.log(apiItem.createdBy) }
       </Body>
       <Footer />
     </Container>
@@ -135,3 +143,4 @@ export const pageQuery = graphql`
     }
   }
 `
+export default Template;

@@ -24,7 +24,7 @@ import {
     Text,
     Date,
     Code,
-} from './styles.js'
+} from './styles'
 
 // ICONS
 import {
@@ -37,7 +37,7 @@ import {
     GrUpdate
 } from 'react-icons/gr';
 
-export default function TemplateDnr() {
+const TemplateDnr: React.FC = () => {
 
     return (
         <Container>
@@ -236,3 +236,5 @@ export default function TemplateDnr() {
         </Container>
     )
 }
+
+export default TemplateDnr;

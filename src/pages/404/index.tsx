@@ -22,7 +22,7 @@ import logo from '../../assets/img/logo.png';
 // STYLES GLOBAL
 import { GlobalStyle } from '../../styles/global';
 
-export default function Home() {
+const NotFound: React.FC = () => {
 
   return (
         <Container>
@@ -55,3 +55,5 @@ export default function Home() {
         </Container>
   )
 }
+
+export default NotFound;

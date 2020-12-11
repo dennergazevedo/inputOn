@@ -25,7 +25,7 @@ import {
     Date,
     Code,
     Repo
-} from './styles.js'
+} from './styles'
 
 // ICONS
 import {
@@ -39,7 +39,7 @@ import {
     FaHeart
 } from 'react-icons/fa';
 
-export default function SucraseNodeJS() {
+const SucraseNodeJS: React.FC = () => {
 
     return (
         <Container>
@@ -236,3 +236,5 @@ export default function SucraseNodeJS() {
         </Container>
     )
 }
+
+export default SucraseNodeJS;

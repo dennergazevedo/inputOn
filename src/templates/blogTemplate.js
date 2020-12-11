@@ -37,13 +37,13 @@ import { FaBookmark } from 'react-icons/fa'
 // ASSETS
 import logo from '../assets/img/logo.png'
 
-import api from '../menu/api.json'
+import api from '../menu/api';
 
 export default function Template({ data }) {
-  const { markdownRemark } = data // data.markdownRemark holds your post data
+  const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
 
-  let apiItem
+  let apiItem;
 
   function handleApiFront() {
     for (let i = 0; i < api.length; i++) {

@@ -29,7 +29,7 @@ import {
     Logo,
     Repo,
     Cards
-} from './styles.js'
+} from './styles'
 
 // ICONS
 import {

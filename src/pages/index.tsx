@@ -21,7 +21,7 @@ import Card from '../components/Card';
 import { GlobalStyle } from '../styles/global';
 
 // SERVICES
-import api from '../menu/api.json';
+import api from '../menu/api';
 import { Helmet } from "react-helmet";
 
 // ICONS
@@ -30,9 +30,9 @@ import {
 } from 'react-icons/bs';
 
 
-export default function Home() {
+ const Home: React.FC = () => {
 
-  const [limit, setLimit] = useState(9);
+  const [limit, setLimit] = useState<number>(9);
 
   return (
     <Container>
@@ -49,12 +49,10 @@ export default function Home() {
             [...api.keys()].map(id => (
                 <>
                   {
-                    !api[id].destaque?
-                    <div key={id} hidden={Number(id) > Number(limit)}>
-                      <Card id={id} api={api[id]}/>
+                    !api[id].destaque &&
+                    <div hidden={id > limit}>
+                      <Card api={api[id]}/>
                     </div>
-                    :
-                    null
                   }
                 </>
             ))
@@ -62,8 +60,8 @@ export default function Home() {
         </ListCards>
 
         {
-          Number(limit) < Number(api.length)?
-          <DivNextPage onClick={() => setLimit(Number(limit) + Number(9))}>
+          limit < api.length?
+          <DivNextPage onClick={() => setLimit(limit + 9)}>
             <MoreItems>
               <BsArrowDownShort className="icon"/>
             </MoreItems>
@@ -75,3 +73,5 @@ export default function Home() {
     </Container>
   )
 }
+
+export default Home;

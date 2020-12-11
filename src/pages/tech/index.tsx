@@ -18,7 +18,7 @@ import {
     ListCards,
     DivNextPage,
     MoreItems
-} from './styles.js'
+} from './styles'
 
 // ICONS
 import {
@@ -29,13 +29,13 @@ import {
 } from 'react-icons/bs';
 
 // API
-import api from '../../menu/api.json';
+import api, { IItem } from '../../menu/api';
 
-export default function TECH() {
+const Tech: React.FC = () => {
 
-    const [limit, setLimit] = useState(9);
+    const [limit, setLimit] = useState<number>(9);
 
-    let apiTech = [];
+    let apiTech: Array<IItem> = [];
 
     function handleapiTech(){
         for(let i=0; i < api.length; i++){
@@ -68,16 +68,16 @@ export default function TECH() {
             <ListCards>
                 {
                     [...apiTech.keys()].map(id => (
-                        <div key={id} hidden={Number(id) >= Number(limit)}>
-                            <Card id={id} api={apiTech[id]}/>
+                        <div key={id} hidden={id >= limit}>
+                            <Card api={apiTech[id]}/>
                         </div>
                     ))
                 }
                 </ListCards>
 
                 {
-                Number(limit) < Number(apiTech.length)?
-                <DivNextPage onClick={() => setLimit(Number(limit) + Number(9))}>
+                limit < apiTech.length?
+                <DivNextPage onClick={() => setLimit(limit + 9)}>
                     <MoreItems>
                     <BsArrowDownShort className="icon"/>
                     </MoreItems>
@@ -89,3 +89,5 @@ export default function TECH() {
         </Container>
     )
 }
+
+export default Tech;

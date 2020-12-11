@@ -23,7 +23,7 @@ import {
   TitleText,
   Text,
   Date,
-} from './styles.js'
+} from './styles'
 
 // ICONS
 import {
@@ -35,7 +35,7 @@ import {
   FaCheck,
 } from 'react-icons/fa'
 
-export default function UXUI() {
+const ApiRestRestfull: React.FC = () => {
   return (
     <Container>
       <Helmet>
@@ -305,3 +305,5 @@ export default function UXUI() {
     </Container>
   )
 }
+
+export default ApiRestRestfull;

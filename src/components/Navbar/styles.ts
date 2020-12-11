@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
+interface IMenuOpened {
+    menuOpened: boolean;
+}
+
 export const Main = styled.div`
     display: flex;
     flex-direction: row;
@@ -60,7 +64,7 @@ export const Logo = styled.h1`
     }
 `;
 
-export const Menu = styled.div`
+export const Menu = styled.div<IMenuOpened>`
     display: flex;
     flex-direction: row;
     align-items: center;

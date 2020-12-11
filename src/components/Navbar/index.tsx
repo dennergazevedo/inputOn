@@ -28,11 +28,11 @@ import {
     FaMoon,
 } from 'react-icons/fa';
 
-export default function Navbar() {
+const Navbar: React.FC = () => {
     const { theme, toggleTheme } = useTheme();
 
-    const [menuOpen, setMenuOpen] = useState(false);
-    const [isDark, setIsDark] = useState(false);
+    const [menuOpen, setMenuOpen] = useState<boolean>(false);
+    const [isDark, setIsDark] = useState<boolean>(false);
 
     const toggleMenu = () => setMenuOpen(!menuOpen);
 
@@ -55,7 +55,7 @@ export default function Navbar() {
             <Container>
                 {
                     window.screen.width > 800 ?
-                        <Menu>
+                        <Menu menuOpened={menuOpen}>
                             <Switch
                                 onChange={toggleTheme}
                                 checked={isDark}
@@ -104,3 +104,5 @@ export default function Navbar() {
         </Main>
     )
 }
+
+export default Navbar;

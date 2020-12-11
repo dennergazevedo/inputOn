@@ -17,7 +17,7 @@ import {
     ListCards,
     DivNextPage,
     MoreItems
-} from './styles.js'
+} from './styles'
 
 // ICONS
 import {
@@ -28,14 +28,14 @@ import {
 } from 'react-icons/bs';
 
 // API
-import api from '../../menu/api.json';
+import api, { IItem } from '../../menu/api';
 import { Helmet } from "react-helmet";
 
-export default function Frontend() {
+const Frontend: React.FC = () => {
 
-    const [limit, setLimit] = useState(9);
+    const [limit, setLimit] = useState<number>(9);
 
-    let apiFront = [];
+    let apiFront: Array<IItem> = [];
 
     function handleApiFront(){
         for(let i=0; i < api.length; i++){
@@ -68,16 +68,16 @@ export default function Frontend() {
             <ListCards>
                 {
                     [...apiFront.keys()].map(id => (
-                        <div key={id} hidden={Number(id) >= Number(limit)}>
-                            <Card id={id} api={apiFront[id]}/>
+                        <div key={id} hidden={id >= limit}>
+                            <Card api={apiFront[id]}/>
                         </div>
                     ))
                 }
                 </ListCards>
 
                 {
-                Number(limit) < Number(apiFront.length)?
-                <DivNextPage onClick={() => setLimit(Number(limit) + Number(9))}>
+                limit < apiFront.length?
+                <DivNextPage onClick={() => setLimit(limit + 9)}>
                     <MoreItems>
                     <BsArrowDownShort className="icon"/>
                     </MoreItems>
@@ -89,3 +89,5 @@ export default function Frontend() {
         </Container>
     )
 }
+
+export default Frontend;

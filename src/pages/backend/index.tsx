@@ -18,7 +18,7 @@ import {
     ListCards,
     DivNextPage,
     MoreItems
-} from './styles.js'
+} from './styles'
 
 // ICONS
 import {
@@ -29,13 +29,13 @@ import {
 } from 'react-icons/bs';
 
 // API
-import api from '../../menu/api.json';
+import api, { IItem } from '../../menu/api';
 
-export default function Backend() {
+const Backend: React.FC = () => {
 
-    const [limit, setLimit] = useState(9);
+    const [limit, setLimit] = useState<number>(9);
 
-    let apiBack = [];
+    let apiBack: Array<IItem> = [];
 
     function handleApiBackend(){
         for(let i=0; i < api.length; i++){
@@ -68,16 +68,16 @@ export default function Backend() {
             <ListCards>
                 {
                     [...apiBack.keys()].map(id => (
-                        <div key={id} hidden={Number(id) >= Number(limit)}>
-                            <Card id={id} api={apiBack[id]} />
+                        <div key={id} hidden={id >= limit}>
+                            <Card api={apiBack[id]} />
                         </div>
                     ))
                 }
                 </ListCards>
 
                 {
-                Number(limit) < Number(apiBack.length)?
-                <DivNextPage onClick={() => setLimit(Number(limit) + Number(9))}>
+                limit < apiBack.length?
+                <DivNextPage onClick={() => setLimit(limit + 9)}>
                     <MoreItems>
                     <BsArrowDownShort className="icon"/>
                     </MoreItems>
@@ -89,3 +89,5 @@ export default function Backend() {
         </Container>
     )
 }
+
+export default Backend;

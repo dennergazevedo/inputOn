@@ -9,7 +9,7 @@ import {
   Social,
   Subtitle,
   Tech,
-} from './styles.js';
+} from './styles';
 
 // ASSETS
 import pedroVasconcellos from '../../../assets/img/author-pedro-vasconcellos.jpg';
@@ -23,7 +23,7 @@ import { Helmet } from 'react-helmet';
 // ICONS
 import { FaGithub, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 
-export default function index() {
+const PedroVasconcellos: React.FC = () => {
   return (
     <Container>
       <Helmet>
@@ -197,3 +197,5 @@ export default function index() {
     </Container>
   );
 }
+
+export default PedroVasconcellos;

@@ -9,7 +9,7 @@ import {
     Social,
     Subtitle,
     Tech
-} from './styles.js';
+} from './styles';
 
 // ASSETS
 import dennerAzevedo from '../../../assets/img/author-denner-azevedo.jpg';
@@ -27,7 +27,7 @@ import {
     FaLinkedinIn
 } from 'react-icons/fa';
 
-export default function index() {
+const DennerAzevedo: React.FC = () => {
     return (
         <Container>
             <Helmet>
@@ -98,3 +98,5 @@ export default function index() {
         </Container>
     )
 }
+
+export default DennerAzevedo;

@@ -16,8 +16,7 @@ import {
     FaInstagram
 } from 'react-icons/fa';
 
-export default function Footer() {
-
+const Footer:React.FC = () => {
 
     return (
         <Main>
@@ -50,3 +49,5 @@ export default function Footer() {
         </Main>
     )
 }
+
+export default Footer;

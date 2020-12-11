@@ -23,7 +23,7 @@ import {
     TitleText,
     Text,
     Date
-} from './styles.js'
+} from './styles'
 
 // ICONS
 import {
@@ -37,7 +37,7 @@ import {
     FaBookmark
 } from 'react-icons/fa';
 
-export default function UXUI() {
+const UXUI: React.FC = () => {
 
     return (
         <Container>
@@ -271,3 +271,5 @@ export default function UXUI() {
         </Container>
     )
 }
+
+export default UXUI;

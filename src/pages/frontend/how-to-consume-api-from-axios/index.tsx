@@ -28,7 +28,7 @@ import {
     BodyItem,
     Version,
     Repo
-} from './styles.js'
+} from './styles'
 
 // ICONS
 import {
@@ -42,7 +42,7 @@ import {
 // ASSETS
 import logomarca from '../../../assets/img/logo.png'
 
-export default function TemplateDnr() {
+const ConsumeApi:React.FC = () => {
 
     return (
         <Container>
@@ -399,3 +399,4 @@ export default function TemplateDnr() {
         </Container>
     )
 }
+export default ConsumeApi;

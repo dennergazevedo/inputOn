@@ -25,7 +25,7 @@ import {
     Date,
     Code,
     Repo
-} from './styles.js'
+} from './styles'
 
 // ICONS
 import {
@@ -46,7 +46,7 @@ import {
     FaGithub
 } from 'react-icons/fa';
 
-export default function ExpressNodeJs() {
+const ExpressNodeJs: React.FC = () => {
 
     return (
         <Container>
@@ -585,3 +585,5 @@ export default function ExpressNodeJs() {
         </Container>
     )
 }
+
+export default ExpressNodeJs;

@@ -2,12 +2,12 @@ import React from 'react'
 import { navigate } from 'gatsby'
 
 // STYLED COMPONENTS
-import { Container, Photo } from './styles.js'
+import { Container, Photo } from './styles'
 
 // ASSETS
 import photo from '../../assets/img/author-pedro-vasconcellos.jpg'
 
-export default function CardDenner() {
+const CardPedro: React.FC = () => {
   return (
     <Container onClick={() => navigate('/author/pedro-vasconcellos')}>
       <Photo src={photo} alt="Pedro Vasconcellos" />
@@ -25,3 +25,4 @@ export default function CardDenner() {
     </Container>
   )
 }
+export default CardPedro;

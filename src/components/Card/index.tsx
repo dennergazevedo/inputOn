@@ -13,7 +13,13 @@ import {
     ListMenu
 } from './styles';
 
-export default function Card(props) {
+import { IItem } from '../../menu/api';
+
+interface IProps{
+    api: IItem,
+}
+
+const Card:React.FC<IProps> = (props:IProps) => {
     const [api, setApi] = useState(props.api);
 
     useEffect(()=>{
@@ -53,3 +59,5 @@ export default function Card(props) {
         </Container>
     )
 }
+
+export default Card;

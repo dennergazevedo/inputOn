@@ -27,7 +27,7 @@ import {
     Logo,
     Logomarca,
     BodyLogo
-} from './styles.js'
+} from './styles'
 
 // ICONS
 import {
@@ -42,7 +42,7 @@ import {
 // ASSETS
 import logo from '../../../assets/img/logo.png'
 
-export default function TemplateDnr() {
+const DarkTheme: React.FC = () => {
 
     return (
         <Container>
@@ -134,3 +134,5 @@ export default function TemplateDnr() {
         </Container>
     )
 }
+
+export default DarkTheme;

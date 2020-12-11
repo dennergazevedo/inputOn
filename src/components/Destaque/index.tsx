@@ -20,11 +20,11 @@ import {
 import Carousel from '../Carousel';
 
 // API
-import api from '../../menu/api.json';
+import api, { IItem } from '../../menu/api';
 import { navigate } from 'gatsby';
 
-export default function Destaque(props) {
-    let apiItem = [];
+export default function Destaque() {
+    let apiItem: Array<IItem> = [];
 
     function handleSetDestaque() {
         for (let i = 0; i < api.length; i++) {
@@ -54,7 +54,7 @@ export default function Destaque(props) {
                             <CreatedBy onClick={() => navigate(`author/${apiItem[index].createdLink}`)}>
                                 <span>por <b>{apiItem[index].createdBy}</b></span>
                             </CreatedBy>
-                            <MenuIcon onClick={() => navigate(`${(apiItem[index].menu).toLowerCase()}`)}>
+                            <MenuIcon onClick={() => navigate(`/${apiItem[index].menu}`)}>
                                 <span>{apiItem[index].menu}</span>
                             </MenuIcon>
                         </Body>

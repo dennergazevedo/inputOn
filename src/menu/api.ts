@@ -1,4 +1,14 @@
-[
+export interface IItem{
+  title: string,
+  createdBy: string,
+  createdLink: string,
+  menu: string | Array<string>,
+  url: string,
+  destaque: Boolean,
+  img: string
+}
+
+export default <Array<IItem>>[
   {
     "title": "TypeScript - Uma Breve Explicação",
     "createdBy": "Pedro Vasconcellos",

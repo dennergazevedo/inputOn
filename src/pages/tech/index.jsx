@@ -35,17 +35,17 @@ export default function TECH() {
 
     const [limit, setLimit] = useState(9);
 
-    let apiFront = [];
+    let apiTech = [];
 
-    function handleApiFront(){
+    function handleapiTech(){
         for(let i=0; i < api.length; i++){
             if(api[i].menu === 'TECH'){
-                apiFront.push(api[i]);
+                apiTech.push(api[i]);
             }
         }
     }
 
-    handleApiFront();
+    handleapiTech();
 
     return (
         <Container>
@@ -67,16 +67,16 @@ export default function TECH() {
             </Body>
             <ListCards>
                 {
-                    [...apiFront.keys()].map(id => (
+                    [...apiTech.keys()].map(id => (
                         <div key={id} hidden={Number(id) >= Number(limit)}>
-                            <Card id={id} />
+                            <Card id={id} api={apiTech[id]}/>
                         </div>
                     ))
                 }
                 </ListCards>
 
                 {
-                Number(limit) < Number(apiFront.length)?
+                Number(limit) < Number(apiTech.length)?
                 <DivNextPage onClick={() => setLimit(Number(limit) + Number(9))}>
                     <MoreItems>
                     <BsArrowDownShort className="icon"/>

@@ -1,30 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useSwipeable } from "react-swipeable";
 
 // STYLED COMPONENTS
 import {
+    Carousel,
     Container,
-    Image,
-    Body,
-    DestIcon,
+    Imagem,
+    Describe,
     Title,
     CreatedBy,
-    MenuIcon
+    ListTag,
+    Tag,
+    ButtonNext,
+    ButtonBack,
 } from './styles';
 
 // ICONS
 import {
-    FaStar
-} from 'react-icons/fa';
-
-// COMPONENTS
-import Carousel from '../Carousel';
+    IoIosArrowForward,
+    IoIosArrowBack
+} from 'react-icons/io';
 
 // API
 import api, { IItem } from '../../menu/api';
 import { navigate } from 'gatsby';
 
-export default function Destaque() {
+const Destaque: React.FC = () => {
     let apiItem: Array<IItem> = [];
+    const [sliding, setSliding] = useState<number>(0);
+    const [dir, setDir] = useState('NEXT');
+
+    const handlers = useSwipeable({
+        onSwipedLeft: () => handleNext(),
+        onSwipedRight: () => handleBack(),
+        preventDefaultTouchmoveEvent: true,
+        trackMouse: true
+      });
 
     function handleSetDestaque() {
         for (let i = 0; i < api.length; i++) {
@@ -35,32 +46,63 @@ export default function Destaque() {
       }
 
     handleSetDestaque();
+
+    function handleNext(){
+        if(sliding !== apiItem.length - 1){
+            setSliding(sliding + 1);
+        }else{
+            setSliding(0);
+        }
+    }
+
+    function handleBack(){
+        if(sliding !== 0){
+            setSliding(sliding - 1);
+        }else{
+            setSliding(apiItem.length - 1);
+        }
+    }
     
     return (
-        <Carousel title="Carousel">
+        <Carousel {...handlers} style={{cursor:'grab'}}>
             {
-                apiItem &&
-                [...apiItem.keys()].map(index => (
-                    <Container>
-                        <Image src={apiItem[index].img} alt="Imagem" onClick={() => navigate(`${apiItem[index].url}`)}/>
-                        <Body>
-                            <DestIcon>
-                                <FaStar className="icon" />
-                                <span>DESTAQUE</span>
-                            </DestIcon>
-                            <Title onClick={() => navigate(`${apiItem[index].url}`)}>
-                                {apiItem[index].title}
-                            </Title>
-                            <CreatedBy onClick={() => navigate(`author/${apiItem[index].createdLink}`)}>
-                                <span>por <b>{apiItem[index].createdBy}</b></span>
+                [...apiItem.keys()].map(id => (
+                    <Container sliding={sliding} dir={dir}>
+                        <Imagem onClick={() => navigate(`${apiItem[id].url}`)} src={apiItem[id].img} alt={apiItem[id].title} />
+                        <Describe>
+                            <Title onClick={() => navigate(`${apiItem[id].url}`)}>{apiItem[id].title}</Title>
+                            <CreatedBy onClick={() => navigate(`/author/${String(apiItem[id].createdLink).toLowerCase()}`)}>
+                                por <b>{apiItem[id].createdBy}</b>
                             </CreatedBy>
-                            <MenuIcon onClick={() => navigate(`/${apiItem[index].menu}`)}>
-                                <span>{apiItem[index].menu}</span>
-                            </MenuIcon>
-                        </Body>
+                            <ListTag>
+                                {
+                                    Array.isArray(apiItem[id].menu)?
+                                    <>
+                                        {
+                                            [...apiItem[id].menu].map(id => (
+                                                <Tag key={id} onClick={() => navigate(`/${id.toLowerCase()}`)}>
+                                                    <span>{id}</span>
+                                                </Tag>
+                                            ))
+                                        }
+                                    </>
+                                    :
+                                    <Tag onClick={() => navigate(`/${String(apiItem[id].menu).toLowerCase()}`)}>
+                                        <span>{apiItem[id].menu}</span>
+                                    </Tag>
+                                }
+                            </ListTag>
+                        </Describe>
                     </Container>
                 ))
             }
+            <ButtonNext>
+                <IoIosArrowForward onClick={handleNext} className="icon"/>
+            </ButtonNext>
+            <ButtonBack>
+                <IoIosArrowBack onClick={handleBack} className="icon"/>
+            </ButtonBack>
         </Carousel>
     )
 }
+export default Destaque;

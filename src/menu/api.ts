@@ -15,7 +15,7 @@ export default <Array<IItem>>[
     "createdLink": "pedro-vasconcellos",
     "menu": ["BACKEND", "FRONTEND"],
     "url": "/backend/sobre-typescript",
-    "destaque": false,
+    "destaque": true,
     "img": "https://i.imgur.com/wsViFXw.jpg"
   },
   {
@@ -24,7 +24,7 @@ export default <Array<IItem>>[
     "createdLink": "denner-azevedo",
     "menu": "TECH",
     "url": "/tech/vscode-dark-theme",
-    "destaque": false,
+    "destaque": true,
     "img": "https://i.imgur.com/UEHnoWn.png"
   },
   {
@@ -42,7 +42,7 @@ export default <Array<IItem>>[
     "createdLink": "pedro-vasconcellos",
     "menu": "FRONTEND",
     "url": "/frontend/template-cra-pdr-typescript",
-    "destaque": true,
+    "destaque": false,
     "img": "https://i.imgur.com/TTPmvCA.png"
   },
   {
@@ -105,7 +105,7 @@ export default <Array<IItem>>[
     "createdLink": "denner-azevedo",
     "menu": "FRONTEND",
     "url": "/frontend/ux-ui-design",
-    "destaque": true,
+    "destaque": false,
     "img": "https://i.imgur.com/xyorwuR.png"
   }
 ]

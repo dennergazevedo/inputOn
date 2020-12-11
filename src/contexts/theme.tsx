@@ -20,30 +20,19 @@ interface IThemeContext{
 const ThemeContext = createContext<IThemeContext>({setThemeString: '', themeString: ''});
 
 const ThemeProvider: React.FC<any> = ({ children }) => {
-  const [themeString, setThemeString] = useState(null);
-  const themeObject = themeString === "dark" ? darkTheme : lightTheme;
+  const [themeString, setThemeString] = useState('');
+  const themeObject = window.localStorage.getItem('@inputon:theme') === "dark" ? darkTheme : lightTheme;
 
   useEffect(()=>{
-    setThemeString(JSON.parse(window.localStorage.getItem('@inputon:theme') || 'light'))
+    setThemeString(JSON.parse(window.localStorage.getItem('@inputon:theme')))
   },[])
 
   return (
-    <>
-      {
-        themeString ?
-        <ThemeContext.Provider value={{ themeString, setThemeString }}>
-          <BaseThemeProvider theme={themeObject}>
-            {children}
-          </BaseThemeProvider>
-        </ThemeContext.Provider>
-        :
-        <ThemeContext.Provider value={{ themeString, setThemeString }}>
-          <BaseThemeProvider theme={themeObject}>
-            <span> </span>
-          </BaseThemeProvider>
-        </ThemeContext.Provider>
-      }
-    </>
+      <ThemeContext.Provider value={{ themeString, setThemeString }}>
+        <BaseThemeProvider theme={themeObject}>
+          {children}
+        </BaseThemeProvider>
+      </ThemeContext.Provider>
   );
 };
 

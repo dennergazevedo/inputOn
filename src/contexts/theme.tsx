@@ -2,12 +2,12 @@ import React, {
   useState,
   useContext,
   createContext,
-  useEffect
+  useEffect,
 } from "react";
 
-import { ThemeProvider as BaseThemeProvider } from "styled-components";
-
 import { window } from 'browser-monads';
+
+import { ThemeProvider as BaseThemeProvider } from "styled-components";
 
 
 import { lightTheme, darkTheme } from "../styles/themes";
@@ -19,20 +19,24 @@ interface IThemeContext{
 
 const ThemeContext = createContext<IThemeContext>({setThemeString: '', themeString: ''});
 
-const ThemeProvider: React.FC<any> = ({ children }) => {
-  const [themeString, setThemeString] = useState('');
+const ThemeProvider = ({ children }) => {
+  const [themeString, setThemeString] = useState("light");
   const themeObject = themeString === "dark" ? darkTheme : lightTheme;
 
   useEffect(()=>{
-    setThemeString(JSON.parse(window.localStorage.getItem('@inputon:theme') || 'light'))
-  },[])
+    async function loadStorageData(){
+      const storageTheme = await window.localStorage.getItem('@inputon:theme');
+      if(storageTheme) setThemeString(JSON.parse(storageTheme));
+    }
+    loadStorageData();
+  }, [])
 
   return (
-      <ThemeContext.Provider value={{ themeString, setThemeString }}>
-        <BaseThemeProvider theme={themeObject}>
-          {children}
-        </BaseThemeProvider>
-      </ThemeContext.Provider>
+    <ThemeContext.Provider value={{ themeString, setThemeString }}>
+      <BaseThemeProvider theme={themeObject}>
+        {children}
+      </BaseThemeProvider>
+    </ThemeContext.Provider>
   );
 };
 
@@ -40,7 +44,7 @@ function useTheme() {
   const context = useContext(ThemeContext);
 
   if (!context)
-    throw new Error("ThemeProvider não encontrado.");
+    throw new Error("useTheme must be used within a ThemeProvider");
 
   const { themeString, setThemeString } = context;
 

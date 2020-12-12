@@ -96,12 +96,17 @@ const Destaque: React.FC = () => {
                     </Container>
                 ))
             }
-            <ButtonNext>
-                <IoIosArrowForward onClick={handleNext} className="icon"/>
-            </ButtonNext>
-            <ButtonBack>
-                <IoIosArrowBack onClick={handleBack} className="icon"/>
-            </ButtonBack>
+            {
+                apiItem.length >= 1 && 
+                <>
+                    <ButtonNext>
+                        <IoIosArrowForward onClick={handleNext} className="icon"/>
+                    </ButtonNext>
+                    <ButtonBack>
+                        <IoIosArrowBack onClick={handleBack} className="icon"/>
+                    </ButtonBack>
+                </>
+            }
         </Carousel>
     )
 }

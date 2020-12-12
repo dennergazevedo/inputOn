@@ -13,6 +13,26 @@ export const Container = styled.div`
     background-color: ${props => props.theme.background}
 `;
 
+export const Posts = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: ${props => props.theme.primary};
+    margin: 20px;
+    cursor: pointer;
+    font-weight: 700;
+
+    .icon{
+        margin-right: 10px;
+        font-size: 14px;
+    }
+
+    &:hover{
+        color: ${props => props.theme.color};
+    }
+`;
+
 export const Body = styled.div`
     display: flex;
     flex-direction: column;
@@ -77,9 +97,12 @@ export const Tech = styled.div`
     justify-content: center;
     margin-top: 100px;
     margin-bottom: 40px;
+    width: 50vw;
+    min-width: 320px;
 
     a{
         margin-left: 10px;
         margin-right: 10px;
+        margin-top: 10px;
     }
 `;

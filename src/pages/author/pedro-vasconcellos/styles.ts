@@ -13,6 +13,26 @@ export const Container = styled.div`
   background-color: ${props => props.theme.background};
 `;
 
+export const Posts = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: ${props => props.theme.primary};
+    margin: 20px;
+    cursor: pointer;
+    font-weight: 700;
+
+    .icon{
+        margin-right: 10px;
+        font-size: 14px;
+    }
+
+    &:hover{
+        color: ${props => props.theme.color};
+    }
+`;
+
 export const Body = styled.div`
   display: flex;
   flex-direction: column;

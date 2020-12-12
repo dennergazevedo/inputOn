@@ -8,7 +8,8 @@ import {
     Author,
     Social,
     Subtitle,
-    Tech
+    Tech,
+    Posts
 } from './styles';
 
 // ASSETS
@@ -24,10 +25,27 @@ import { Helmet } from "react-helmet";
 import {
     FaGithub,
     FaInstagram,
-    FaLinkedinIn
+    FaLinkedinIn,
+    FaBookmark
 } from 'react-icons/fa';
 
+import api, { IItem } from '../../../menu/api';
+
 const DennerAzevedo: React.FC = () => {
+
+    let apiDnr: Array<IItem> = [];
+
+    function handleApiFront(){
+        for(let i=0; i < api.length; i++){
+            if(api[i].createdBy === "Denner Azevedo"){
+                apiDnr.push(api[i]);
+            }
+        }
+    }
+
+    handleApiFront();
+
+
     return (
         <Container>
             <Helmet>
@@ -40,6 +58,10 @@ const DennerAzevedo: React.FC = () => {
             <Body>
                 <ImageProfile src={dennerAzevedo} alt="Denner Azevedo"/>
                 <Author>Denner Azevedo</Author>
+                <Posts>
+                    <FaBookmark className="icon"/>
+                    <span onClick={() => window.open('/author/denner-azevedo/posts')}>{apiDnr.length} POSTS</span>
+                </Posts>
                 <Social>
                     <FaGithub className="icon" onClick={() => window.open('https://github.com/dennergazevedo')}/>
                     <FaLinkedinIn className="icon" onClick={() => window.open('https://linkedin.com/in/denner-azevedo-6b7b97199/')}/>
@@ -58,15 +80,35 @@ const DennerAzevedo: React.FC = () => {
                     </a>
                     
                     <a href="https://nodejs.org" target="_blank" rel="noreferrer">
-                        <img src="https://devicons.github.io/devicon/devicon.git/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/>
+                        <img src="https://devicon.dev/devicon.git/icons/nodejs/nodejs-original.svg" alt="nodejs" width="40" height="40"/>
                     </a>
                     
                     <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
                         <img src="https://devicons.github.io/devicon/devicon.git/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/>
                     </a>
+
+                    <a href="https://sequelize.org" target="_blank" rel="noreferrer">
+                        <img src="https://devicon.dev/devicon.git/icons/sequelize/sequelize-original.svg" alt="sequelize" width="40" height="40"/>
+                    </a>
+
+                    <a href="https://redux.js.org" target="_blank" rel="noreferrer">
+                        <img src="https://devicon.dev/devicon.git/icons/redux/redux-original.svg" alt="redux" width="40" height="40"/>
+                    </a>
                     
                     <a href="https://expressjs.com" target="_blank" rel="noreferrer">
-                        <img src="https://devicons.github.io/devicon/devicon.git/icons/express/express-original-wordmark.svg" alt="express" width="40" height="40"/>
+                        <img src="https://devicon.dev/devicon.git/icons/express/express-original.svg" alt="express" width="40" height="40"/>
+                    </a>
+
+                    <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank" rel="noreferrer">
+                        <img src="https://devicon.dev/devicon.git/icons/html5/html5-original.svg" alt="html" width="40" height="40"/>
+                    </a>
+
+                    <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank" rel="noreferrer">
+                        <img src="https://devicon.dev/devicon.git/icons/css3/css3-original.svg" alt="css" width="40" height="40"/>
+                    </a>
+
+                    <a href="https://www.gatsbyjs.com" target="_blank" rel="noreferrer">
+                        <img src="https://www.vectorlogo.zone/logos/gatsbyjs/gatsbyjs-icon.svg" alt="gatsby" width="40" height="40"/>
                     </a>
                     
                     <a href="https://heroku.com" target="_blank" rel="noreferrer">
@@ -80,9 +122,9 @@ const DennerAzevedo: React.FC = () => {
                     <a href="https://www.mysql.com" target="_blank" rel="noreferrer">
                         <img src="https://www.vectorlogo.zone/logos/mysql/mysql-icon.svg" alt="mysql" width="40" height="40"/>
                     </a>
-                    
-                    <a href="https://www.gatsbyjs.com" target="_blank" rel="noreferrer">
-                        <img src="https://www.vectorlogo.zone/logos/gatsbyjs/gatsbyjs-icon.svg" alt="gatsby" width="40" height="40"/>
+
+                    <a href="https://www.postgresql.org" target="_blank" rel="noreferrer">
+                        <img src="https://devicon.dev/devicon.git/icons/postgresql/postgresql-plain.svg" alt="npm" width="40" height="40"/>
                     </a>
                     
                     <a href="https://www.framer.com/api/motion/" target="_blank" rel="noreferrer">
@@ -91,6 +133,30 @@ const DennerAzevedo: React.FC = () => {
                     
                     <a href="https://expo.io" target="_blank" rel="noreferrer">
                         <img src="https://www.vectorlogo.zone/logos/expoio/expoio-icon.svg" alt="expo" width="40" height="40"/>
+                    </a>
+                    
+                    <a href="https://reactnative.dev" target="_blank" rel="noreferrer">
+                        <img src="https://devicon.dev/devicon.git/icons/android/android-plain.svg" alt="android" width="40" height="40"/>
+                    </a>
+
+                    <a href="https://reactnative.dev" target="_blank" rel="noreferrer">
+                        <img src="https://devicon.dev/devicon.git/icons/apple/apple-original.svg" alt="ios" width="40" height="40"/>
+                    </a>
+
+                    <a href="https://www.docker.com" target="_blank" rel="noreferrer">
+                        <img src="https://devicon.dev/devicon.git/icons/docker/docker-original.svg" alt="docker" width="40" height="40"/>
+                    </a>
+
+                    <a href="https://www.npmjs.com" target="_blank" rel="noreferrer">
+                        <img src="https://devicon.dev/devicon.git/icons/npm/npm-original-wordmark.svg" alt="npm" width="40" height="40"/>
+                    </a>
+
+                    <a href="https://yarnpkg.com" target="_blank" rel="noreferrer">
+                        <img src="https://devicon.dev/devicon.git/icons/yarn/yarn-original.svg" alt="yarn" width="40" height="40"/>
+                    </a>
+
+                    <a href="https://www.ssh.com/ssh/" target="_blank" rel="noreferrer">
+                        <img src="https://devicon.dev/devicon.git/icons/ssh/ssh-original.svg" alt="ssh" width="40" height="40"/>
                     </a>
                 </Tech>
             </Body>

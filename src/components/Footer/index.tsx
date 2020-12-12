@@ -12,7 +12,6 @@ import {
 
 // ICONS
 import {
-    FaFacebookSquare,
     FaInstagram
 } from 'react-icons/fa';
 
@@ -28,8 +27,7 @@ const Footer:React.FC = () => {
                     <span onClick={() => navigate('/tech')}>TECH</span>
                 </div>
                 <div>
-                    <span className="social"><FaFacebookSquare /></span>
-                    <span className="social"><FaInstagram /></span>
+                    <span className="social"><FaInstagram onClick={() => window.open('https://www.instagram.com/bloginputon/')}/></span>
                 </div>
             </Top>
             <Bottom>

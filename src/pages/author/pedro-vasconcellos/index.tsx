@@ -9,6 +9,7 @@ import {
   Social,
   Subtitle,
   Tech,
+  Posts
 } from './styles';
 
 // ASSETS
@@ -21,9 +22,25 @@ import { GlobalStyle } from '../../../styles/global';
 import { Helmet } from 'react-helmet';
 
 // ICONS
-import { FaGithub, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { FaGithub, FaInstagram, FaLinkedinIn, FaBookmark } from 'react-icons/fa';
+
+// API
+import api, { IItem } from '../../../menu/api';
 
 const PedroVasconcellos: React.FC = () => {
+
+  let apiPdr: Array<IItem> = [];
+
+    function handleApiFront(){
+        for(let i=0; i < api.length; i++){
+            if(api[i].createdBy === "Pedro Vasconcellos"){
+                apiPdr.push(api[i]);
+            }
+        }
+    }
+
+    handleApiFront();
+
   return (
     <Container>
       <Helmet>
@@ -39,6 +56,10 @@ const PedroVasconcellos: React.FC = () => {
       <Body>
         <ImageProfile src={pedroVasconcellos} alt="Pedro Vasconcellos" />
         <Author>Pedro Vasconcellos</Author>
+        <Posts>
+            <FaBookmark className="icon"/>
+            <span onClick={() => window.open('/author/pedro-vasconcellos/posts')}>{apiPdr.length} POSTS</span>
+        </Posts>
         <Social>
           <FaGithub
             className="icon"

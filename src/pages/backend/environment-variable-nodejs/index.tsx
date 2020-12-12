@@ -59,7 +59,7 @@ const EnvVariable: React.FC = () => {
           <Imagem src="https://i.imgur.com/3OWpAB5.png" alt="API REST" />
           <div className="titleRight">
             <TitleText>Como gerenciar Variáveis de Ambiente no NodeJS.</TitleText>
-            <CreatedBy onClick={() => navigate(`/author/pedro-vasconcellos`)}>
+            <CreatedBy onClick={() => navigate(`/author/denner-azevedo`)}>
               <span>
                 por <b>Denner Azevedo</b>
               </span>

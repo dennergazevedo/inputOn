@@ -10,12 +10,21 @@ export interface IItem{
 
 export default <Array<IItem>>[
   {
+    "title": "NodeJS - Gerenciando Variáveis de Ambiente",
+    "createdBy": "Denner Azevedo",
+    "createdLink": "denner-azevedo",
+    "menu": "BACKEND",
+    "url": "/backend/environment-variable-nodejs",
+    "destaque": false,
+    "img": "https://i.imgur.com/3OWpAB5.png"
+  },
+  {
     "title": "TypeScript - Uma Breve Explicação",
     "createdBy": "Pedro Vasconcellos",
     "createdLink": "pedro-vasconcellos",
     "menu": ["BACKEND", "FRONTEND"],
     "url": "/backend/sobre-typescript",
-    "destaque": true,
+    "destaque": false,
     "img": "https://i.imgur.com/wsViFXw.jpg"
   },
   {
@@ -42,7 +51,7 @@ export default <Array<IItem>>[
     "createdLink": "pedro-vasconcellos",
     "menu": "FRONTEND",
     "url": "/frontend/template-cra-pdr-typescript",
-    "destaque": false,
+    "destaque": true,
     "img": "https://i.imgur.com/TTPmvCA.png"
   },
   {

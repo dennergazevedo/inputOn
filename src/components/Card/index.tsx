@@ -33,7 +33,7 @@ const Card:React.FC<IProps> = (props:IProps) => {
                 {api.title}
             </Title>
             <Body>
-                <CreatedBy onClick={() => navigate(`author/${api.createdLink}`)}>
+                <CreatedBy>
                     <span>por <b>{api.createdBy}</b></span>
                 </CreatedBy>
                 <ListMenu>

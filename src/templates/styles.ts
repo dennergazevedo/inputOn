@@ -222,11 +222,11 @@ export const MenuIcon = styled.div`
 `
 
 export const ListMenu = styled.div`
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
 `
 
 export const Text = styled.div`
@@ -345,6 +345,8 @@ export const Text = styled.div`
 
     margin-top: 10px;
     margin-bottom: 0;
+
+    overflow: auto;
   }
 
   span {
@@ -353,7 +355,7 @@ export const Text = styled.div`
     color: ${props => props.theme.color};
   }
 
-  div{
+  div {
     display: flex;
     flex-direction: column;
     width: 100%;

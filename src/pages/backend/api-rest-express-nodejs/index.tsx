@@ -53,7 +53,7 @@ const ExpressNodeJs: React.FC = () => {
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>InputOn - API REST com NodeJS Express</title>
-                <link rel="canonical" href="https://www.inputon.com.br/ux-ui-design" />
+                <link rel="canonical" href="https://www.inputon.com.br/backend/api-rest-express-nodejs" />
             </Helmet>
             <GlobalStyle />
             <Navbar />

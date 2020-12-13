@@ -46,7 +46,7 @@ const SucraseNodeJS: React.FC = () => {
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>InputOn - Sucrase NodeJS</title>
-                <link rel="canonical" href="https://www.inputon.com.br/sucrase-with-nodejs" />
+                <link rel="canonical" href="https://www.inputon.com.br/backend/sucrase-with-nodejs" />
             </Helmet>
             <GlobalStyle />
             <Navbar />

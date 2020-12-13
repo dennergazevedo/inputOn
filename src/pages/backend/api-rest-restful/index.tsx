@@ -41,7 +41,7 @@ const ApiRestRestfull: React.FC = () => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>InputOn - APIs, REST e RESTful.</title>
-        <link rel="canonical" href="https://www.inputon.com.br/ux-ui-design" />
+        <link rel="canonical" href="https://www.inputon.com.br/backend/api-rest-restful" />
       </Helmet>
       <GlobalStyle />
       <Navbar />

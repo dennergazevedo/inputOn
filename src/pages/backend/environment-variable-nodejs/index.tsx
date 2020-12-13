@@ -50,7 +50,7 @@ const EnvVariable: React.FC = () => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>InputOn - .ENV no NodeJS.</title>
-        <link rel="canonical" href="https://www.inputon.com.br/ux-ui-design" />
+        <link rel="canonical" href="https://www.inputon.com.br/backend/environment-variable-nodejs" />
       </Helmet>
       <GlobalStyle />
       <Navbar />

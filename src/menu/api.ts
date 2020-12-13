@@ -10,6 +10,15 @@ export interface IItem{
 
 export default <Array<IItem>>[
   {
+    "title": "Criptografia no NodeJS com Crypto.",
+    "createdBy": "Denner Azevedo",
+    "createdLink": "denner-azevedo",
+    "menu": "BACKEND",
+    "url": "/backend/crypto-with-nodejs",
+    "destaque": false,
+    "img": "https://i.imgur.com/v6lOdcO.png"
+  },
+  {
     "title": "NodeJS - Gerenciando Variáveis de Ambiente",
     "createdBy": "Denner Azevedo",
     "createdLink": "denner-azevedo",

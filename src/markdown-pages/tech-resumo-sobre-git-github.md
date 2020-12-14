@@ -154,7 +154,7 @@ Também viu como funciona a plataforma do GitHub. Tem muuuuitas funcionalidades,
 
 É hora de colocar todos os seus projetos lá, tendo em vista que o GitHub serve praticamente como um "curriculo", já que é um histórico do que você está estudando/praticando/trabalhando.  
 
-Espero que esse post tenha deixado mais claro a ideia do versionamento através do git. [**Nesse post eu mostro**](inputon.com.br/tech/atalhos-git) como utilizo o **git config** pra acelerar ainda mais esse processo, usando os chamados **alias**, ou atalhos pros comandos padrão do git. Vale a pena ver! 🤖  
+Espero que esse post tenha deixado mais claro a ideia do versionamento através do git. [**Nesse outro post eu mostro**](inputon.com.br/tech/atalhos-git) como utilizo o **git config** pra acelerar ainda mais esse processo, usando os chamados **alias**, ou atalhos pros comandos padrão do git. Vale a pena ver! 🤖  
 
 <div>
 

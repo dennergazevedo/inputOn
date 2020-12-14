@@ -9,7 +9,7 @@ export interface IItem {
 }
 export default <Array<IItem>>[
   {
-    title: 'Git Alias',
+    title: 'Git - Atalhos com Git Alias',
     createdBy: 'Pedro Vasconcellos',
     createdLink: 'pedro-vasconcellos',
     menu: 'TECH',

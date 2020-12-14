@@ -4,12 +4,14 @@ date: '2020-12-14'
 title: 'Git - Atalhos (Alias)'
 ---
 
-Aí dev, hoje a dica é rápida! Abaixo você aprenderá como configurar seus 
-_alias_, também conhecidos como atalhos do git. Basicamente, eles nos permitem configurar atalhos tanto de subcódigos do git, quanto de códigos externos à ele.  
+Aí dev, hoje a dica é rápida! Abaixo você aprenderá como configurar seus _alias_, também conhecidos como atalhos do git.  
+Basicamente, eles nos permitem configurar atalhos tanto de subcódigos do git, quanto de códigos externos à ele.  
 
 ---
 
-## Command-line  
+## 🤏🏽 Command-line  
+
+<br />
 
 Inicialmente, podemos configurar um alias da seguinte forma:
 
@@ -37,7 +39,9 @@ Por ser menos visual, vou ensinar a realizar a configuração através de um edi
 
 ---
 
-## Editor  
+## ✍🏽 Editor  
+
+<br />
 
 Para começarmos, vá até o terminal e digite:
 
@@ -69,6 +73,8 @@ você consegue visualizar todo o arquivo **.gitconfig**.
 É possível configurar bastaaaante coisa ai. Se você se interessar, pode encontrar configurações interessantes na [**documentação do git**](https://git-scm.com/docs/git-config).
 
 ---
+
+<br />
 
 Para configurar seu editor padrão, basta usar o comando:
 
@@ -110,6 +116,16 @@ ou fazer como na imagem, adicionando o campo **editor** seguido do caminho.
 
 ---
 
+<br />
+
 Pode ter certeza que esses atalhos vão ajudar muito na sua produtividade.  
 
-Um forte abraço, e **só agradece a atenção**! 🙏🏽 
+
+
+<div>
+
+Um forte abraço, e **só agradece a atenção**! 🙏🏽  
+
+![Final Gif](https://media1.tenor.com/images/ed3bc2e831bd666a436b779640358b32/tenor.gif?itemid=17808977)
+
+</div>

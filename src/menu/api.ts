@@ -7,8 +7,16 @@ export interface IItem {
   destaque: Boolean
   img: string
 }
-
 export default <Array<IItem>>[
+  {
+    title: 'Git Alias',
+    createdBy: 'Pedro Vasconcellos',
+    createdLink: 'pedro-vasconcellos',
+    menu: 'TECH',
+    url: '/tech/atalhos-git',
+    destaque: false,
+    img: 'https://i.imgur.com/WB8Qb2t.png',
+  },
   {
     title: 'Um resumo sobre Git e GitHub.',
     createdBy: 'Pedro Vasconcellos',

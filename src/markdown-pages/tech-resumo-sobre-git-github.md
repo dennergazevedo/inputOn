@@ -37,11 +37,20 @@ O fluxo de um projeto usando git possui 3 áreas principais:
 Nesse ponto, você adicionou e confirmou que deseja enviar as mudanças para o repositório remoto, mas ainda não o fez. Este é feito pelo **git push**.
 
 ---
-## Do zero  
 
+## Do zero
 
 Vamos, do zero, iniciar um projeto usando git pra entender melhor.  
-Acessamos a pasta desejada e abrimos o terminal ali. Então, para criarmos um repositório, usamos o comando
+Primeiramente, temos que configurar nosso usuário. Para isso, abra o terminal e digite:
+
+```git
+git config --global user.name "Seu Nome"
+git config --global user.email "email_do_github"
+```
+
+A flag _**--global**_ indica que o arquivo .gitconfig será editado globalmente, sendo aplicado à todos os repositórios.  
+
+Agora, acessamos a pasta desejada e abrimos o terminal ali. Então, para criarmos um repositório, usamos o comando
 
 ```git
 git init
@@ -145,9 +154,7 @@ Também viu como funciona a plataforma do GitHub. Tem muuuuitas funcionalidades,
 
 É hora de colocar todos os seus projetos lá, tendo em vista que o GitHub serve praticamente como um "curriculo", já que é um histórico do que você está estudando/praticando/trabalhando.  
 
-Espero que esse post tenha deixado mais claro a ideia do versionamento através do git. No próximo, vou mostrar como eu utilizo o **git config** pra acelerar ainda mais esse processo, usando os chamados **alias**, ou atalhos pros comandos padrão do git. 🤖  
-
-
+Espero que esse post tenha deixado mais claro a ideia do versionamento através do git. [**Nesse post eu mostro**](inputon.com.br/tech/atalhos-git) como utilizo o **git config** pra acelerar ainda mais esse processo, usando os chamados **alias**, ou atalhos pros comandos padrão do git. Vale a pena ver! 🤖  
 
 <div>
 

@@ -4,6 +4,7 @@ import React from 'react'
 import Navbar from '../../../components/Navbar';
 import Footer from '../../../components/Footer';
 import CardDenner from '../../../components/CardDenner';
+import Comments from '../../../components/Comments';
 
 // SERVICES
 import { navigate } from 'gatsby';
@@ -44,12 +45,18 @@ import logomarca from '../../../assets/img/logo.png'
 
 const ConsumeApi:React.FC = () => {
 
+    const config = {
+        url: 'https://www.inputon.com.br/frontend/how-to-consume-api-from-axios',
+        identifier: 'how-to-consume-api-from-axios',
+        title: 'InputOn - Consumindo API REST com Axios'
+    }
+
     return (
         <Container>
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>InputOn - Consumindo API REST com Axios</title>
-                <link rel="canonical" href="https://www.inputon.com.br/ux-ui-design" />
+                <link rel="canonical" href="https://www.inputon.com.br/frontend/how-to-consume-api-from-axios" />
             </Helmet>
             <GlobalStyle />
             <Navbar />
@@ -393,7 +400,7 @@ const ConsumeApi:React.FC = () => {
                 </Text>
 
                 <CardDenner />
-                
+                <Comments config={config} />
             </Body>
             <Footer />
         </Container>

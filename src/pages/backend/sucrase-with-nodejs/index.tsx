@@ -4,6 +4,7 @@ import React from 'react'
 import Navbar from '../../../components/Navbar';
 import Footer from '../../../components/Footer';
 import CardDenner from '../../../components/CardDenner';
+import Comments from '../../../components/Comments';
 
 // SERVICES
 import { navigate } from 'gatsby';
@@ -40,6 +41,12 @@ import {
 } from 'react-icons/fa';
 
 const SucraseNodeJS: React.FC = () => {
+
+    const config = {
+        url: 'https://www.inputon.com.br/backend/sucrase-with-nodejs',
+        identifier: 'sucrase-with-nodejs',
+        title: 'InputOn - Sucrase NodeJS'
+    }
 
     return (
         <Container>
@@ -231,6 +238,7 @@ const SucraseNodeJS: React.FC = () => {
                     <img className="small" src='https://media.tenor.com/images/2ec83aeeb2e9244a2131dab14fdb910e/tenor.gif' alt="BOBESPONJA" />
                 </Text>
                 <CardDenner />
+                <Comments config={config} />
             </Body>
             <Footer />
         </Container>

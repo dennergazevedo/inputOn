@@ -62,6 +62,12 @@ module.exports = {
         path: `${__dirname}/src/markdown-pages`,
       },
     },
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+          shortname: `inputon`
+      }
+    },
     `gatsby-transformer-remark`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-offline`,

@@ -4,6 +4,7 @@ import React from 'react'
 import Navbar from '../../../components/Navbar'
 import Footer from '../../../components/Footer'
 import CardDenner from '../../../components/CardDenner'
+import Comments from '../../../components/Comments'
 
 // SERVICES
 import { navigate } from 'gatsby'
@@ -24,7 +25,6 @@ import {
   Text,
   Date,
   Code,
-  Repo,
 } from './styles'
 
 // ICONS
@@ -32,17 +32,16 @@ import {
   FaCode,
   FaBookmark,
   FaLock,
-  FaDownload,
-  FaPalette,
 } from 'react-icons/fa'
-import {
-    AiFillGithub,
-} from 'react-icons/ai'
-import {
-    VscSymbolVariable
-} from 'react-icons/vsc';
 
 const CryptoNodeJS: React.FC = () => {
+
+    const config = {
+        url: 'https://www.inputon.com.br/backend/crypto-with-nodejs',
+        identifier: 'crypto-with-nodejs',
+        title: 'Criptografia no NodeJS com Crypto.'
+    }
+
   return (
     <Container>
       <Helmet>
@@ -310,9 +309,10 @@ const CryptoNodeJS: React.FC = () => {
         <Text>
             <img src="https://miro.medium.com/max/3200/1*L_QoAG863l8QvqxpNyBiqw.gif" alt="GIF" className="medium"/>
         </Text>
-
-
         <CardDenner />
+        <Comments
+            config={config}
+            />
       </Body>
       <Footer />
     </Container>

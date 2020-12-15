@@ -4,6 +4,7 @@ import React from 'react'
 import Navbar from '../../../components/Navbar';
 import Footer from '../../../components/Footer';
 import CardDenner from '../../../components/CardDenner';
+import Comments from '../../../components/Comments';
 
 // SERVICES
 import { navigate } from 'gatsby';
@@ -39,12 +40,18 @@ import {
 
 const TemplateDnr: React.FC = () => {
 
+    const config = {
+        url: 'https://www.inputon.com.br/frontend/react-hooks-props-state',
+        identifier: 'react-hooks-props-state',
+        title: 'InputOn - ReactHooks, Props e States'
+    }
+
     return (
         <Container>
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>InputOn - ReactHooks, Props e States</title>
-                <link rel="canonical" href="https://www.inputon.com.br/ux-ui-design" />
+                <link rel="canonical" href="https://www.inputon.com.br/frontend/react-hooks-props-state" />
             </Helmet>
             <GlobalStyle />
             <Navbar />
@@ -230,7 +237,7 @@ const TemplateDnr: React.FC = () => {
                 </Text>
 
                 <CardDenner />
-                
+                <Comments config={config} />
             </Body>
             <Footer />
         </Container>

@@ -4,6 +4,7 @@ import React from 'react'
 import Navbar from '../../../components/Navbar';
 import Footer from '../../../components/Footer';
 import CardDenner from '../../../components/CardDenner';
+import Comments from '../../../components/Comments';
 
 // SERVICES
 import { navigate } from 'gatsby';
@@ -44,12 +45,18 @@ import logo from '../../../assets/img/logo.png'
 
 const DarkTheme: React.FC = () => {
 
+    const config = {
+        url: 'https://www.inputon.com.br/tech/vscode-dark-theme',
+        identifier: 'vscode-dark-theme',
+        title: 'InputOn - VSCode Dark Theme'
+    }
+
     return (
         <Container>
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>InputOn - VSCode Dark Theme</title>
-                <link rel="canonical" href="https://www.inputon.com.br/ux-ui-design" />
+                <link rel="canonical" href="https://www.inputon.com.br/tech/vscode-dark-theme" />
             </Helmet>
             <GlobalStyle />
             <Navbar />
@@ -128,7 +135,7 @@ const DarkTheme: React.FC = () => {
                 </Text>
 
                 <CardDenner />
-                
+                <Comments config={config} />
             </Body>
             <Footer />
         </Container>

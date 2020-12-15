@@ -4,6 +4,7 @@ import React from 'react'
 import Navbar from '../../../components/Navbar'
 import Footer from '../../../components/Footer'
 import CardPedro from '../../../components/CardPedro'
+import Comments from '../../../components/Comments'
 
 // SERVICES
 import { navigate } from 'gatsby'
@@ -36,6 +37,14 @@ import {
 } from 'react-icons/fa'
 
 const ApiRestRestfull: React.FC = () => {
+
+  const config = {
+    url: 'https://www.inputon.com.br/backend/api-rest-restful',
+    identifier: 'api-rest-restful',
+    title: 'InputOn - APIs, REST e RESTful.'
+}
+
+
   return (
     <Container>
       <Helmet>
@@ -300,6 +309,7 @@ const ApiRestRestfull: React.FC = () => {
         </Text>
 
         <CardPedro />
+        <Comments config={config} />
       </Body>
       <Footer />
     </Container>

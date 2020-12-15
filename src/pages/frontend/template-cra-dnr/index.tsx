@@ -4,6 +4,7 @@ import React from 'react'
 import Navbar from '../../../components/Navbar';
 import Footer from '../../../components/Footer';
 import CardDenner from '../../../components/CardDenner';
+import Comments from '../../../components/Comments';
 
 // SERVICES
 import { navigate } from 'gatsby';
@@ -54,12 +55,18 @@ import logo from '../../../assets/img/logo.png';
 
 export default function TemplateDnr() {
 
+    const config = {
+        url: 'https://www.inputon.com.br/frontend/template-cra-dnr',
+        identifier: 'template-cra-dnr',
+        title: 'InputOn - Template CRA'
+    }
+
     return (
         <Container>
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>InputOn - Template CRA</title>
-                <link rel="canonical" href="https://www.inputon.com.br/ux-ui-design" />
+                <link rel="canonical" href="https://www.inputon.com.br/frontend/template-cra-dnr" />
             </Helmet>
             <GlobalStyle />
             <Navbar />
@@ -308,7 +315,7 @@ export default function TemplateDnr() {
                 </Text>
 
                 <CardDenner />
-                
+                <Comments config={config} />
             </Body>
             <Footer />
         </Container>

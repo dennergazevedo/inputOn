@@ -4,6 +4,7 @@ import React from 'react'
 import Navbar from '../../../components/Navbar';
 import Footer from '../../../components/Footer';
 import CardDenner from '../../../components/CardDenner';
+import Comments from '../../../components/Comments';
 
 // SERVICES
 import { navigate } from 'gatsby';
@@ -39,12 +40,18 @@ import {
 
 const UXUI: React.FC = () => {
 
+    const config = {
+        url: 'https://www.inputon.com.br/frontend/ux-ui-design',
+        identifier: 'ux-ui-design',
+        title: 'InputOn - UX e UI design'
+    }
+
     return (
         <Container>
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>InputOn - UX e UI design</title>
-                <link rel="canonical" href="https://www.inputon.com.br/ux-ui-design" />
+                <link rel="canonical" href="https://www.inputon.com.br/frontend/ux-ui-design" />
             </Helmet>
             <GlobalStyle />
             <Navbar />
@@ -265,7 +272,7 @@ const UXUI: React.FC = () => {
                 </Text>
 
                 <CardDenner />
-                
+                <Comments config={config} />
             </Body>
             <Footer />
         </Container>

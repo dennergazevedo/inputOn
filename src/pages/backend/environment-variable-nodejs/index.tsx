@@ -4,6 +4,7 @@ import React from 'react'
 import Navbar from '../../../components/Navbar'
 import Footer from '../../../components/Footer'
 import CardDenner from '../../../components/CardDenner'
+import Comments from '../../../components/Comments'
 
 // SERVICES
 import { navigate } from 'gatsby'
@@ -45,6 +46,14 @@ import {
 } from 'react-icons/vsc';
 
 const EnvVariable: React.FC = () => {
+
+    const config = {
+        url: 'https://www.inputon.com.br/backend/environment-variable-nodejs',
+        identifier: 'environment-variable-nodejs',
+        title: 'InputOn - .ENV no NodeJS.'
+    }
+
+
   return (
     <Container>
       <Helmet>
@@ -327,8 +336,9 @@ const EnvVariable: React.FC = () => {
             <img src="https://i.imgur.com/OiUlrDW.gif?1" alt="GIF" className="small"/>
         </Text>
 
-
         <CardDenner />
+
+        <Comments config={config} />
       </Body>
       <Footer />
     </Container>

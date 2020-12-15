@@ -6,6 +6,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import CardPedro from '../components/CardPedro'
 import CardDenner from '../components/CardDenner'
+import Comments from '../components/Comments'
 
 // SERVICES
 import { navigate } from 'gatsby'
@@ -63,6 +64,12 @@ const Template: React.FC<any> = ({ data }) => {
   }
 
   handleApiFront()
+
+  const config = {
+    url: `https://www.inputon.com.br${frontmatter.slug}`,
+    identifier: frontmatter.slug,
+    title: frontmatter.title
+  }
 
   return (
     <Container>
@@ -125,6 +132,7 @@ const Template: React.FC<any> = ({ data }) => {
         </Logo>
         { apiItem.createdBy === "Denner Azevedo" && <CardDenner /> }
         { apiItem.createdBy === "Pedro Vasconcellos" && <CardPedro /> }
+        <Comments config={config} />
       </Body>
       <Footer />
     </Container>

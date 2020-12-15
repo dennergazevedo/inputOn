@@ -4,6 +4,7 @@ import React from 'react'
 import Navbar from '../../../components/Navbar';
 import Footer from '../../../components/Footer';
 import CardDenner from '../../../components/CardDenner';
+import Comments from '../../../components/Comments';
 
 // SERVICES
 import { navigate } from 'gatsby';
@@ -47,6 +48,12 @@ import {
 } from 'react-icons/fa';
 
 const ExpressNodeJs: React.FC = () => {
+    
+    const config = {
+        url: 'https://www.inputon.com.br/backend/api-rest-express-nodejs',
+        identifier: 'api-rest-express-nodejs',
+        title: 'InputOn - API REST com NodeJS Express'
+    }
 
     return (
         <Container>
@@ -580,6 +587,7 @@ const ExpressNodeJs: React.FC = () => {
                     </p>
                 </Text>
                 <CardDenner />
+                <Comments config={config} />
             </Body>
             <Footer />
         </Container>

@@ -1,5 +1,7 @@
 import styled, { keyframes } from 'styled-components'
 
+import { shade } from 'polished'
+
 import '../css/typography.css'
 
 export const Container = styled.div`
@@ -251,12 +253,13 @@ export const Text = styled.div`
     text-decoration: none;
 
     a {
-      color: ${props => props.theme.color};
+      color: ${props => props.theme.primary};
       font-weight: 600;
 
       transition: 0.5s all;
+
       &:hover {
-        color: ${props => props.theme.primary};
+        color: ${props => shade(0.3, props.theme.primary)};
       }
     }
 

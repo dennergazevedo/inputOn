@@ -9,6 +9,15 @@ export interface IItem {
 }
 export default <Array<IItem>>[
   {
+    title: 'Animações no ReactJS com React-Lottie',
+    createdBy: 'Denner Azevedo',
+    createdLink: 'denner-azevedo',
+    menu: 'FRONTEND',
+    url: '/frontend/react-lottie',
+    destaque: false,
+    img: 'https://i.imgur.com/XnJhlVJ.png',
+  },
+  {
     title: 'Git - Atalhos com Git Alias',
     createdBy: 'Pedro Vasconcellos',
     createdLink: 'pedro-vasconcellos',
